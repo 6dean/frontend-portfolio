@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-  max-width: 780px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -86,6 +86,7 @@ header {
 
 .listing_projects {
   display: flex;
+  padding-top: 20px;
 }
 
 .card_fp {
@@ -94,12 +95,28 @@ header {
   border: double 4px transparent;
   border-radius: 8px;
   background-image: linear-gradient(rgb(255, 255, 255), white),
-    radial-gradient(circle at top left, #f00, #3020ff);
+    radial-gradient(circle at top left, rgb(0, 0, 0), #717171);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   margin-right: 18px;
   padding: 10px;
   height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card_fp:hover {
+  border: 2px solid;
+  border: double 4px transparent;
+  border-radius: 8px;
+  background-image: linear-gradient(rgb(255, 255, 255), white),
+    radial-gradient(circle at top left, #717171, black);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: all 0.4s;
+  box-shadow: 4px 1px 8px black;
+  cursor: pointer;
 }
 
 .card__fp {
@@ -108,12 +125,28 @@ header {
   border: double 4px transparent;
   border-radius: 8px;
   background-image: linear-gradient(white, white),
-    radial-gradient(circle at top left, #f00, #3020ff);
+    radial-gradient(circle at top left, rgb(26, 216, 207), #007782);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   margin-right: 10px;
   margin-left: 10px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__fp:hover {
+  border: 2px solid;
+  border: double 4px transparent;
+  border-radius: 8px;
+  background-image: linear-gradient(rgb(255, 255, 255), white),
+    radial-gradient(circle at top left, #007782, rgb(26, 216, 207));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: all 0.4s;
+  box-shadow: 4px 1px 8px rgb(26, 216, 207);
+  cursor: pointer;
 }
 
 .card___fp {
@@ -122,11 +155,54 @@ header {
   border: double 4px transparent;
   border-radius: 8px;
   background-image: linear-gradient(white, white),
-    radial-gradient(circle at top left, #f00, #3020ff);
+    radial-gradient(circle at top left, #ffbf00, #0f892c);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   margin-left: 18px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card___fp:hover {
+  border: 2px solid;
+  border: double 4px transparent;
+  border-radius: 8px;
+  background-image: linear-gradient(rgb(255, 255, 255), white),
+    radial-gradient(circle at top left, #0f892c, #ffbf00);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: all 0.4s;
+  box-shadow: 4px 1px 8px #ffbf00;
+  cursor: pointer;
+}
+
+.a_list {
+  margin-top: 15px;
+}
+
+.card_title {
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 6px;
+}
+
+.card_description {
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.listing_cap {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.208);
+  padding-bottom: 15px;
+  padding-top: 20px;
 }
 
 footer {
@@ -135,4 +211,5 @@ footer {
   margin-top: 60px;
   border-top: 1px solid rgba(128, 128, 128, 0.148);
   padding-top: 30px;
+  padding-bottom: 60px;
 }
