@@ -58,7 +58,7 @@ const Home = () => {
           Check all projects <FontAwesomeIcon icon={faArrowRight} size="sm" />{" "}
         </Link>
       </div>
-      <div className="title">About Myself</div>
+      <div className="title">Abilities</div>
       <div className="description">
         I have few skills, I can code HTML, CSS, JS and JSX. I know how to use
         some softwares like Visual Studio Code, MongoDB Compass, Postman,
@@ -87,10 +87,8 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div class="wrapper">
-        <div class="border"></div>
-        <div class="main-element"></div>
-      </div>
+
+      <div className="title">Spotify</div>
     </>
   );
 };

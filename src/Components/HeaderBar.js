@@ -12,11 +12,11 @@ const HeaderBar = () => {
         <Link to="/projects">
           <div className="h_elem">Projects</div>
         </Link>
+        <Link to="/skills">
+          <div className="h_elem">Skills</div>
+        </Link>
         <Link to="/guestbook">
           <div className="h_elem">Guestbook</div>
-        </Link>
-        <Link to="/stats">
-          <div className="h_elem">Stats</div>
         </Link>
         <Link to="/more">
           <div className="h_elem">More</div>

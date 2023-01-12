@@ -56,7 +56,15 @@ header {
   font-family: "Vazirmatn", sans-serif;
   letter-spacing: -1px;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 45px;
+}
+
+.name_page {
+  padding-top: 60px;
+  font-family: "Vazirmatn", sans-serif;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-size: 45px;
 }
 
 .job {
@@ -84,6 +92,13 @@ header {
   font-size: 32px;
 }
 
+.sub_title {
+  padding-top: 30px;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+
 .listing_projects {
   display: flex;
   padding-top: 20px;
@@ -92,12 +107,16 @@ header {
 .card_fp {
   flex: 1;
   border: 2px solid;
-  border: double 4px transparent;
-  border-radius: 8px;
-  background-image: linear-gradient(rgb(255, 255, 255), white),
-    radial-gradient(circle at top left, rgb(0, 0, 0), #717171);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  border-radius: 50%;
+  border-image-source: linear-gradient(
+    to right,
+    #ff0000,
+    #0000ff,
+    rgb(1, 255, 1),
+    rgb(252, 3, 252)
+  );
+  border-image-slice: 1;
+  transition: border-image-source 0.9s;
   margin-right: 18px;
   padding: 10px;
   height: 200px;
@@ -107,27 +126,22 @@ header {
 }
 
 .card_fp:hover {
-  border: 2px solid;
-  border: double 4px transparent;
-  border-radius: 8px;
-  background-image: linear-gradient(rgb(255, 255, 255), white),
-    radial-gradient(circle at top left, #717171, black);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  transition: all 0.4s;
-  box-shadow: 4px 1px 8px black;
+  border-image-source: linear-gradient(
+    to right,
+    rgb(252, 3, 252),
+    #ff0000,
+    #0000ff,
+    rgb(1, 255, 1)
+  );
   cursor: pointer;
 }
 
 .card__fp {
   flex: 1;
   border: 2px solid;
-  border: double 4px transparent;
-  border-radius: 8px;
-  background-image: linear-gradient(white, white),
-    radial-gradient(circle at top left, rgb(26, 216, 207), #007782);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  border-image-source: linear-gradient(to right, #ff0000, #0000ff);
+  border-image-slice: 1;
+  transition: border-image-source 0.9s;
   margin-right: 10px;
   margin-left: 10px;
   padding: 10px;
@@ -137,27 +151,16 @@ header {
 }
 
 .card__fp:hover {
-  border: 2px solid;
-  border: double 4px transparent;
-  border-radius: 8px;
-  background-image: linear-gradient(rgb(255, 255, 255), white),
-    radial-gradient(circle at top left, #007782, rgb(26, 216, 207));
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  transition: all 0.4s;
-  box-shadow: 4px 1px 8px rgb(26, 216, 207);
+  border-image-source: linear-gradient(to right, #0000ff, #ff0000);
   cursor: pointer;
 }
 
 .card___fp {
   flex: 1;
   border: 2px solid;
-  border: double 4px transparent;
-  border-radius: 8px;
-  background-image: linear-gradient(white, white),
-    radial-gradient(circle at top left, #ffbf00, #0f892c);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  border-image-source: linear-gradient(to right, #ff0000, #0000ff);
+  border-image-slice: 1;
+  transition: border-image-source 0.9s;
   margin-left: 18px;
   padding: 10px;
   display: flex;
@@ -166,15 +169,7 @@ header {
 }
 
 .card___fp:hover {
-  border: 2px solid;
-  border: double 4px transparent;
-  border-radius: 8px;
-  background-image: linear-gradient(rgb(255, 255, 255), white),
-    radial-gradient(circle at top left, #0f892c, #ffbf00);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  transition: all 0.4s;
-  box-shadow: 4px 1px 8px #ffbf00;
+  border-image-source: linear-gradient(to right, #0000ff, #ff0000);
   cursor: pointer;
 }
 
