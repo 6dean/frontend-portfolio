@@ -162,7 +162,7 @@ const Projects = () => {
           </div>
           <div className="p_project">
             <div className="p_description">
-              <div>Simple replica page of Kochi, Japan 🇯🇵</div>
+              <div>Front-End replica of Kochi, Japan 🇯🇵</div>
               <div className="p_features">Features : Responsive, Carousel</div>
               <div className="p_stack">Stack : HTML, CSS, Netlify</div>
             </div>

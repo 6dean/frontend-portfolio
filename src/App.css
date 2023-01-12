@@ -275,6 +275,11 @@ header {
   padding: 4px;
 }
 
+.link_more:hover {
+  text-decoration: underline;
+  color: #0059ff;
+}
+
 footer {
   display: flex;
   justify-content: space-around;

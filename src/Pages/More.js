@@ -9,15 +9,23 @@ const More = () => {
         <div className="title">Links</div>
         <div className="listing_contact">
           <li className="list_li">
-            <a href="https://github.com/6dean">GitHub</a>
+            <a className="link_more" href="https://github.com/6dean">
+              GitHub
+            </a>
           </li>
           <li className="list_li">
-            <a href="https://www.linkedin.com/in/rockdean-ferdjallah-4b3a45247/">
+            <a
+              className="link_more"
+              href="https://www.linkedin.com/in/rockdean-ferdjallah-4b3a45247/"
+            >
               LinkedIn
             </a>
           </li>
           <li className="list_li">
-            <a href="mailto:ferdjallahrockdean@gmail.com?Subject=Hello%20Rockdean%20from%20RF%20Portfolio!">
+            <a
+              className="link_more"
+              href="mailto:ferdjallahrockdean@gmail.com?Subject=Hello%20Rockdean%20from%20RF%20Portfolio!"
+            >
               Gmail
             </a>
           </li>
