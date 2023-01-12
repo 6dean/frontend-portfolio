@@ -127,6 +127,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+a {
+  text-decoration: none;
+}
 a:link {
   text-decoration: none;
 }
@@ -144,4 +147,11 @@ a:hover {
 /* selected link */
 a:active {
   text-decoration: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
 }

@@ -54,7 +54,12 @@ const Home = () => {
         </div>
       </div>
       <div className="description">
-        <Link to="/projects">
+        <Link
+          to="/projects"
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           Check all projects <FontAwesomeIcon icon={faArrowRight} size="sm" />{" "}
         </Link>
       </div>
@@ -82,7 +87,12 @@ const Home = () => {
           <div>LOGO</div>
         </div>
         <div className="description">
-          <Link to="/more">
+          <Link
+            to="/more"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
             Get all details <FontAwesomeIcon icon={faArrowRight} size="sm" />{" "}
           </Link>
         </div>

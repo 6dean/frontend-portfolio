@@ -7,9 +7,21 @@ const More = () => {
       </div>
       <div>
         <div className="title">Links</div>
-        <li>GitHub</li>
-        <li>LinkedIn</li>
-        <li>Gmail</li>
+        <div className="listing_contact">
+          <li className="list_li">
+            <a href="https://github.com/6dean">GitHub</a>
+          </li>
+          <li className="list_li">
+            <a href="https://www.linkedin.com/in/rockdean-ferdjallah-4b3a45247/">
+              LinkedIn
+            </a>
+          </li>
+          <li className="list_li">
+            <a href="mailto:ferdjallahrockdean@gmail.com?Subject=Hello%20Rockdean%20from%20RF%20Portfolio!">
+              Gmail
+            </a>
+          </li>
+        </div>
       </div>
       <div className="title">Bio</div>
       <div className="sub_title">Introduction</div>
