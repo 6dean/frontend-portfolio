@@ -28,7 +28,7 @@ header {
   font-family: "Vazirmatn", sans-serif;
   font-weight: 400;
   font-size: 17px;
-  color: rgb(71, 71, 71);
+  opacity: 60%;
   margin-right: 10px;
   padding: 10px 5px 5px 5px;
 }
@@ -44,7 +44,8 @@ header {
   padding: 8px;
   border-radius: 8px;
   border: 2px solid rgba(128, 128, 128, 0);
-  color: white;
+  color: rgb(0, 0, 0);
+  transition: all 0.4s;
 }
 
 .h_mode:hover {
@@ -56,11 +57,12 @@ header {
 }
 
 .h_mode_light {
-  background-color: rgba(255, 255, 255, 0.34);
+  background-color: rgba(83, 83, 83, 0.34);
   padding: 8px;
   border-radius: 8px;
   border: 2px solid rgba(128, 128, 128, 0);
-  color: black;
+  color: rgb(255, 255, 255);
+  transition: all 0.4s;
 }
 
 .h_mode_light:hover {
@@ -96,17 +98,35 @@ header {
   font-family: "Vazirmatn", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: rgb(71, 71, 71);
+  opacity: 60%;
   padding-top: 7px;
+}
+
+.icon {
+  padding-left: 7px;
+}
+
+.div_description {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .description {
   font-family: "Vazirmatn", sans-serif;
-  margin-top: 20px;
   font-weight: 400;
   font-size: 16px;
-  color: rgb(71, 71, 71);
+  opacity: 60%;
   line-height: 1.4;
+}
+
+.f_description {
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 60%;
+  line-height: 1.4;
+  padding-top: 20px;
 }
 
 .title {
@@ -134,7 +154,7 @@ header {
   font-family: "Vazirmatn", sans-serif;
   font-weight: 300;
   font-size: 17px;
-  color: rgba(0, 0, 0, 0.573);
+  opacity: 60%;
 }
 
 .listing_projects {
@@ -231,11 +251,11 @@ header {
 .listing_cap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-family: "Vazirmatn", sans-serif;
   font-weight: 400;
   border-bottom: 1px solid rgba(128, 128, 128, 0.208);
-  padding-bottom: 15px;
-  padding-top: 20px;
+  padding-top: 12px;
 }
 
 .listing_p_card {
@@ -268,7 +288,7 @@ header {
 
 .p_stack {
   padding-top: 15px;
-  color: rgba(0, 0, 0, 0.712);
+  opacity: 60%;
   font-size: 15px;
 }
 
@@ -276,6 +296,7 @@ header {
   padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card_ab {
@@ -285,6 +306,11 @@ header {
   margin-right: 10px;
   border: 1px solid rgba(0, 0, 0, 0.093);
   border-radius: 5px;
+}
+
+.card_ab:hover {
+  box-shadow: 1px 1px 10px rgba(126, 126, 126, 0.242);
+  transition: all 0.3s;
 }
 
 .title_ab {
@@ -298,7 +324,7 @@ header {
   padding-top: 10px;
   font-family: "Vazirmatn", sans-serif;
   font-size: 17px;
-  color: rgba(0, 0, 0, 0.837);
+  opacity: 70%;
 }
 
 .listing_contact {

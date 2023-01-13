@@ -10,7 +10,7 @@ const Footer = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <div className="description">Home</div>
+          <div className="f_description">Home</div>
         </Link>
         <Link
           to="/projects"
@@ -18,7 +18,7 @@ const Footer = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <div className="description">Projects</div>
+          <div className="f_description">Projects</div>
         </Link>
         <Link
           to="/stats"
@@ -26,15 +26,19 @@ const Footer = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <div className="description">Statistics</div>
+          <div className="f_description">Statistics</div>
         </Link>
       </div>
       <div>
-        <a href="https://github.com/6dean">
-          <div className="description">GitHub</div>
+        <a href="https://github.com/6dean" target="_blank" rel="noreferrer">
+          <div className="f_description">GitHub</div>
         </a>
-        <a href="https://www.linkedin.com/in/rockdean-ferdjallah-4b3a45247/">
-          <div className="description">LinkedIn</div>
+        <a
+          href="https://www.linkedin.com/in/rockdean-ferdjallah-4b3a45247/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="f_description">LinkedIn</div>
         </a>
         <Link
           to="/more"
@@ -42,11 +46,17 @@ const Footer = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <div className="description">More</div>
+          <div className="f_description">More</div>
         </Link>
       </div>
       <div>
-        <div className="description">React</div>
+        <a
+          href="https://github.com/6dean/frontend-portfolio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="f_description">Code Source</div>
+        </a>
       </div>
     </footer>
   );

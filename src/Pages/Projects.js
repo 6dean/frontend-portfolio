@@ -5,8 +5,11 @@ const Projects = () => {
   return (
     <>
       <div className="name_page">Projects</div>
-      <div className="description">
-        All my projects are here, check them out ! ⚙️ 💻
+      <div className="div_description">
+        <div className="description">
+          I built several projects with different features for each, I love
+          create Apps.
+        </div>
       </div>
       <div className="listing_p_card">
         <div className="p_card">
@@ -25,7 +28,7 @@ const Projects = () => {
           </div>
           <div className="p_project">
             <div className="p_description">
-              <div>Videogames API holding more than 830.000 references 🎮</div>
+              <div>Videogames API holding more than 830.000 references</div>
               <div className="p_features">
                 Features : Responsive, Search, InfiniteScroll, Members
                 features...
