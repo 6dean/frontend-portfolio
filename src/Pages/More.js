@@ -37,28 +37,40 @@ const More = () => {
       <div className="sub_title">Introduction</div>
       <div className="div_description">
         <div className="description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum non
-          dicta adipisci quod incidunt ea laboriosam voluptatibus aspernatur,
-          possimus delectus voluptatum pariatur eaque ex enim ipsum, perferendis
-          iusto explicabo iure.
+          My name is Rockdean Ferdjallah, but all my friends call me « Dean » I
+          was born october 5th 1989 in Bondy, France. I am a geek since I was 4,
+          i used to play on my SNES and my father's Macintosh. I live now in
+          Paris. I love build apps, listen music, play videogames and checking
+          my crypto wallet.
         </div>
       </div>
       <div className="sub_title">Before Coding</div>
       <div className="div_description">
         <div className="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-          tempora recusandae laboriosam vitae reiciendis vero ut quidem dolorum.
-          Tempora, delectus. Minima provident eius blanditiis aut, nulla maiores
-          fugiat cupiditate impedit.
+          I left school at 18 and got into the professional world through
+          several odd jobs. Then I found stability at the RATP, a public
+          transport company. At the same time, I was following the tech universe
+          and all its novelties with the idea to work in it.
         </div>
       </div>
       <div className="sub_title">Education</div>
       <div className="div_description">
         <div className="description">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi ullam
-          vitae omnis praesentium soluta perspiciatis ipsa, aperiam beatae eum
-          quam voluptate, quibusdam, vel qui consequuntur nulla inventore!
-          Magni, non iusto?
+          I first learned on my own as an autodidact, my first personal website
+          was in 2007 with Joomla then I decided to go to a Coding Bootcamp in
+          2022. It is an accelerated training to learn code but most of all to
+          understand what state of mind of a developer is: autonomy. I learned
+          at{" "}
+          <span className="link_more">
+            <a
+              href="https://www.lereacteur.io/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Le Reacteur
+            </a>
+          </span>{" "}
+          in Paris.{" "}
         </div>
       </div>
       <div className="title">Photos</div>

@@ -24,7 +24,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={darkMode && "rf"}>
+    <div className={darkMode ? "rf" : null}>
       <div className="body">
         <Router>
           <HeaderBar darkMode={darkMode} setDarkMode={setDarkMode} />
