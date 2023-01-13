@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-body {
+.rf {
+  background-color: rgb(18, 18, 18);
+  color: rgba(255, 255, 255, 0.846);
+}
+
+.body {
   max-width: 720px;
   padding-left: 5px;
   padding-right: 5px;
@@ -35,17 +40,35 @@ header {
 }
 
 .h_mode {
-  background-color: rgba(128, 128, 128, 0.128);
+  background-color: rgba(128, 128, 128, 0.411);
   padding: 8px;
   border-radius: 8px;
   border: 2px solid rgba(128, 128, 128, 0);
+  color: white;
 }
 
 .h_mode:hover {
+  color: black;
   cursor: pointer;
-  border: 2px solid gray;
+  border: 2px solid rgb(44, 44, 44);
   box-sizing: border-box;
   transition: all 0.4s;
+}
+
+.h_mode_light {
+  background-color: rgba(255, 255, 255, 0.34);
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid rgba(128, 128, 128, 0);
+  color: black;
+}
+
+.h_mode_light:hover {
+  cursor: pointer;
+  border: 2px solid rgb(255, 255, 255);
+  box-sizing: border-box;
+  transition: all 0.4s;
+  color: white;
 }
 
 .card_id {
@@ -264,6 +287,20 @@ header {
   border-radius: 5px;
 }
 
+.title_ab {
+  padding-top: 10px;
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.description_ab {
+  padding-top: 10px;
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.837);
+}
+
 .listing_contact {
   margin-top: 15px;
 }
@@ -283,7 +320,7 @@ header {
 footer {
   display: flex;
   justify-content: space-around;
-  margin-top: 60px;
+  margin-top: 160px;
   border-top: 1px solid rgba(128, 128, 128, 0.148);
   padding-top: 30px;
   padding-bottom: 60px;

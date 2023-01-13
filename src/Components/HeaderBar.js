@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 
-const HeaderBar = () => {
+const HeaderBar = ({ darkMode, setDarkMode }) => {
   return (
     <header>
       <div className="h_list">
@@ -22,8 +22,17 @@ const HeaderBar = () => {
           <div className="h_elem">More</div>
         </Link>
       </div>
-      <div className="h_mode">
-        <FontAwesomeIcon icon={faMoon} size="lg" />
+      <div
+        className={darkMode ? "h_mode_light" : "h_mode"}
+        onClick={() => {
+          darkMode ? setDarkMode(false) : setDarkMode(true);
+        }}
+      >
+        {darkMode ? (
+          <FontAwesomeIcon icon={faSun} size="lg" />
+        ) : (
+          <FontAwesomeIcon icon={faMoon} size="lg" />
+        )}
       </div>
     </header>
   );

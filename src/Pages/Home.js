@@ -60,7 +60,7 @@ const Home = () => {
             window.scrollTo(0, 0);
           }}
         >
-          Check all projects <FontAwesomeIcon icon={faArrowRight} size="sm" />{" "}
+          Check all projects <FontAwesomeIcon icon={faArrowRight} size="sm" />
         </Link>
       </div>
       <div className="title">Abilities</div>

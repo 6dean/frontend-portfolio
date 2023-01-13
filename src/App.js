@@ -17,22 +17,29 @@ import Stats from "./Pages/Stats";
 import Guestbook from "./Pages/Guestbook";
 import More from "./Pages/More";
 
+// STATES
+import { useState } from "react";
+
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <body>
-      <Router>
-        <HeaderBar />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/projects" element={<Projects />}></Route>
-          <Route path="/skills" element={<Skills />}></Route>
-          <Route path="/guestbook" element={<Guestbook />}></Route>
-          <Route path="/stats" element={<Stats />}></Route>
-          <Route path="/more" element={<More />}></Route>
-        </Routes>
-        <Footer />
-      </Router>
-    </body>
+    <div className={darkMode && "rf"}>
+      <div className="body">
+        <Router>
+          <HeaderBar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/projects" element={<Projects />}></Route>
+            <Route path="/skills" element={<Skills />}></Route>
+            <Route path="/guestbook" element={<Guestbook />}></Route>
+            <Route path="/stats" element={<Stats />}></Route>
+            <Route path="/more" element={<More />}></Route>
+          </Routes>
+          <Footer />
+        </Router>
+      </div>
+    </div>
   );
 }
 
