@@ -12,11 +12,18 @@ const Home = () => {
           <div className="job">JavaScript Developer</div>
           <div className="div_description">
             <div className="description">
-              I love create apps, improve my skills and listening chill music
+              I am a web developer passionate about coding, the geek universe
+              and videogames. I am constantly evolving to improve my skills and
+              take on new challenges in web development.
             </div>
           </div>
         </div>
-        <div>photo</div>
+        <div className="avatar">
+          <img
+            src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673734327/my-content/iconsRF/87292a6c9913d973b16852e7aaeaa842_kbjhiu.jpg"
+            alt="Dean"
+          />
+        </div>
       </div>
       <div className="title">Featured Projects</div>
       <div className="listing_projects">

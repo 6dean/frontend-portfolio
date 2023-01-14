@@ -55,9 +55,16 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <div className="f_description">Code Source</div>
+          <div className="f_description">Source</div>
         </a>
-        <div className="f_description">My Setup</div>
+        <Link
+          to="/setup"
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
+          <div className="f_description">Setup</div>
+        </Link>
       </div>
     </footer>
   );

@@ -16,6 +16,7 @@ import Skills from "./Pages/Skills";
 import Stats from "./Pages/Stats";
 import Guestbook from "./Pages/Guestbook";
 import More from "./Pages/More";
+import Setup from "./Pages/Setup";
 
 // STATES
 import { useState } from "react";
@@ -35,6 +36,7 @@ function App() {
             <Route path="/guestbook" element={<Guestbook />}></Route>
             <Route path="/stats" element={<Stats />}></Route>
             <Route path="/more" element={<More />}></Route>
+            <Route path="/setup" element={<Setup />}></Route>
           </Routes>
           <Footer />
         </Router>

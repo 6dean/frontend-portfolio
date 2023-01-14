@@ -6,9 +6,10 @@
 }
 
 .body {
+  transition: all 0.9s;
   max-width: 720px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -91,7 +92,7 @@ header {
 }
 
 .text_id {
-  border: 1px solid red;
+  max-width: 580px;
 }
 
 .name {
@@ -99,6 +100,20 @@ header {
   letter-spacing: -1px;
   font-weight: bold;
   font-size: 45px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+.avatar img {
+  display: flex;
+  object-fit: cover;
+  min-width: 110px;
+  max-height: 110px;
+  border-radius: 50%;
 }
 
 .name_page {
@@ -159,6 +174,13 @@ header {
   font-size: 22px;
 }
 
+.set_title {
+  padding-top: 55px;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
 .sub_project {
   font-family: "Vazirmatn", sans-serif;
   font-weight: 600;
@@ -173,22 +195,21 @@ header {
 }
 
 .listing_projects {
-  display: flex;
   padding-top: 20px;
+  display: flex;
+  padding: 10px;
 }
 
 .card_fp {
   flex: 1;
   border: 4px solid;
-  border-radius: 50%;
   border-image-source: linear-gradient(
     to bottom left,
     rgb(92, 92, 92),
     #000000
   );
   border-image-slice: 1;
-  transition: border-image-source 0.9s;
-  margin-right: 18px;
+  transition: all 0.9s;
   padding: 15px;
   min-height: 260px;
   display: flex;
@@ -208,7 +229,7 @@ header {
 }
 
 .card_fp:hover {
-  transition: border-image-source 0.9s;
+  transition: all 0.9s;
   border-image-source: linear-gradient(
     to left bottom,
     rgb(255, 0, 0),
@@ -217,6 +238,7 @@ header {
     rgb(255, 242, 0),
     rgb(153, 139, 164)
   );
+  box-shadow: 1px 1px 10px rgb(49, 136, 243);
   cursor: pointer;
 }
 
@@ -226,9 +248,7 @@ header {
   border-radius: 10px;
   border-image: linear-gradient(to bottom left, rgb(92, 92, 92), #000000);
   border-image-slice: 1;
-  transition: border-image-source 0.9s;
-  margin-right: 10px;
-  margin-left: 10px;
+  transition: all 0.9s;
   padding: 15px;
   min-height: 260px;
   display: flex;
@@ -237,7 +257,7 @@ header {
 }
 
 .card__fp:hover {
-  transition: border-image-source 0.9s;
+  transition: all 0.9s;
   border-image-source: linear-gradient(
     to left bottom,
     rgb(255, 0, 0),
@@ -246,6 +266,8 @@ header {
     rgb(255, 242, 0),
     rgb(153, 139, 164)
   );
+  box-shadow: 1px 1px 10px rgb(240, 240, 240);
+
   cursor: pointer;
 }
 
@@ -258,8 +280,7 @@ header {
     #000000
   );
   border-image-slice: 1;
-  transition: border-image-source 0.9s;
-  margin-left: 18px;
+  transition: all 0.9s;
   padding: 15px;
   min-height: 260px;
   display: flex;
@@ -268,7 +289,7 @@ header {
 }
 
 .card___fp:hover {
-  transition: border-image-source 0.9s;
+  transition: all 0.9s;
   border-image-source: linear-gradient(
     to left bottom,
     rgb(255, 0, 0),
@@ -277,6 +298,8 @@ header {
     rgb(255, 242, 0),
     rgb(153, 139, 164)
   );
+  box-shadow: 1px 1px 10px rgb(0, 255, 51);
+
   cursor: pointer;
 }
 
@@ -388,6 +411,14 @@ header {
   padding: 4px;
 }
 
+.list_set {
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px;
+  opacity: 85%;
+}
+
 .link_more {
   font-weight: 600;
 }
@@ -415,12 +446,24 @@ header {
 .modal_img {
   display: flex;
   object-fit: cover;
-  border: 1px solid red;
 }
 
 .modal_img img {
   display: flex;
   object-fit: contain;
+}
+
+.container {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.container img {
+  width: 45%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 footer {
@@ -430,4 +473,97 @@ footer {
   border-top: 1px solid rgba(128, 128, 128, 0.148);
   padding-top: 30px;
   padding-bottom: 60px;
+}
+
+@media (max-width: 600px) {
+  .listing_projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .img_card {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .img_card img {
+    display: flex;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  .card_fp {
+    margin-bottom: 20px;
+  }
+  .card__fp {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 601px) {
+  .listing_projects {
+    display: flex;
+    padding-top: 20px;
+  }
+
+  .card_fp {
+    flex: 1;
+    border: 4px solid;
+    border-image-source: linear-gradient(
+      to bottom left,
+      rgb(92, 92, 92),
+      #000000
+    );
+    border-image-slice: 1;
+    transition: all 0.9s;
+    margin-right: 18px;
+    padding: 15px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card__fp {
+    flex: 1;
+    border: 4px solid;
+    border-radius: 10px;
+    border-image: linear-gradient(to bottom left, rgb(92, 92, 92), #000000);
+    border-image-slice: 1;
+    transition: all 0.9s;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 15px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card___fp {
+    flex: 1;
+    border: 4px solid;
+    border-radius: 10px;
+    border-image: linear-gradient(to bottom left, rgb(92, 92, 92), #000000);
+    border-image-slice: 1;
+    transition: all 0.9s;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 15px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .img_card {
+    display: flex;
+    justify-content: center;
+  }
+
+  .img_card img {
+    display: flex;
+    object-fit: cover;
+    border-radius: 3px;
+  }
 }

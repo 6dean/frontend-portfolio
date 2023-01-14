@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 const More = () => {
   return (
     <>
@@ -6,12 +10,18 @@ const More = () => {
         <div className="description">
           It's time to show you everything about me !
         </div>
+        <span className="icon">🙃</span>
       </div>
       <div>
         <div className="title">Links</div>
         <div className="listing_contact">
           <li className="list_li">
-            <a className="link_more" href="https://github.com/6dean">
+            <a
+              className="link_more"
+              href="https://github.com/6dean"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub
             </a>
           </li>
@@ -19,6 +29,8 @@ const More = () => {
             <a
               className="link_more"
               href="https://www.linkedin.com/in/rockdean-ferdjallah-4b3a45247/"
+              target="_blank"
+              rel="noreferrer"
             >
               LinkedIn
             </a>
@@ -27,8 +39,20 @@ const More = () => {
             <a
               className="link_more"
               href="mailto:ferdjallahrockdean@gmail.com?Subject=Hello%20Rockdean%20from%20RF%20Portfolio!"
+              target="_blank"
+              rel="noreferrer"
             >
               Gmail
+            </a>
+          </li>
+          <li className="list_li">
+            <a
+              className="link_more"
+              href="https://www.instagram.com/r0ckdean/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
             </a>
           </li>
         </div>
@@ -94,6 +118,30 @@ const More = () => {
         </div>
       </div>
       <div className="title">Photos</div>
+      <div className="container">
+        <img
+          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673734327/my-content/iconsRF/87292a6c9913d973b16852e7aaeaa842_kbjhiu.jpg"
+          alt=""
+          width="100"
+        />
+        <img
+          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673734327/my-content/iconsRF/87292a6c9913d973b16852e7aaeaa842_kbjhiu.jpg"
+          alt=""
+          width="100"
+        />
+      </div>
+      <div className="div_description">
+        <div className="f_description">
+          <Link
+            to="/setup"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
+            Check my Setup <FontAwesomeIcon icon={faArrowRight} size="sm" />{" "}
+          </Link>
+        </div>
+      </div>
     </>
   );
 };
