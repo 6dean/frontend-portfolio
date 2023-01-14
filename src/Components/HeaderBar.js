@@ -7,8 +7,6 @@ const HeaderBar = ({ darkMode, setDarkMode }) => {
   const [pageArea, SetPageArea] = useState();
   const location = useLocation();
 
-  console.log(location.pathname, pageArea);
-
   useEffect(() => {
     if (location.pathname === "/") {
       SetPageArea("/");

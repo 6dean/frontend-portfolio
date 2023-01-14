@@ -70,7 +70,27 @@ const More = () => {
               Le Reacteur
             </a>
           </span>{" "}
-          in Paris.{" "}
+          in Paris with{" "}
+          <span className="link_more">
+            <a
+              href="https://github.com/XavierColombel"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Xavier Colombel
+            </a>
+          </span>{" "}
+          and{" "}
+          <span className="link_more">
+            <a
+              href="https://github.com/FaridSafi"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Farid Safi
+            </a>
+          </span>
+          .
         </div>
       </div>
       <div className="title">Photos</div>

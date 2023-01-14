@@ -354,7 +354,7 @@ header {
   padding: 15px;
   margin-bottom: 10px;
   margin-right: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.093);
+  border: 1px solid rgba(78, 78, 78, 0.248);
   border-radius: 5px;
 }
 
@@ -395,6 +395,21 @@ header {
 .link_more:hover {
   text-decoration: underline;
   color: #0059ff;
+}
+
+.stat {
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  opacity: 80%;
+  line-height: 1.4;
+}
+
+.count {
+  padding-top: 10px;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 800;
+  font-size: 35px;
 }
 
 .modal_img {

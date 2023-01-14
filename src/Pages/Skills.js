@@ -1,4 +1,4 @@
-const Stats = () => {
+const Skills = () => {
   return (
     <>
       <div className="name_page">Skills</div>
@@ -256,4 +256,4 @@ const Stats = () => {
   );
 };
 
-export default Stats;
+export default Skills;

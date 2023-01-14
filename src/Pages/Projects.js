@@ -34,7 +34,7 @@ const Projects = () => {
                 features...
               </div>
               <div className="p_stack">
-                Stack : NodeJS, ReactJS, MongoDB, Netlify, NorthFlank
+                Stack : NodeJS, ReactJS, MongoDB, GitHub, Netlify, NorthFlank
               </div>
             </div>
             <div>
