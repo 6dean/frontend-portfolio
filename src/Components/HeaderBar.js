@@ -1,25 +1,55 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { useState, useEffect } from "react";
 
 const HeaderBar = ({ darkMode, setDarkMode }) => {
+  const [pageArea, SetPageArea] = useState();
+  const location = useLocation();
+
+  console.log(location.pathname, pageArea);
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      SetPageArea("/");
+    } else if (location.pathname === "/projects") {
+      SetPageArea("/projects");
+    } else if (location.pathname === "/skills") {
+      SetPageArea("/skills");
+    } else if (location.pathname === "/guestbook") {
+      SetPageArea("/guestbook");
+    } else if (location.pathname === "/more") {
+      SetPageArea("/more");
+    } else {
+      SetPageArea();
+    }
+  }, [location.pathname]);
+
   return (
     <header>
       <div className="h_list">
         <Link to="/">
-          <div className="h_elem">Home</div>
+          <div className={pageArea === "/" ? "h_elem_loc" : "h_elem"}>Home</div>
         </Link>
         <Link to="/projects">
-          <div className="h_elem">Projects</div>
+          <div className={pageArea === "/projects" ? "h_elem_loc" : "h_elem"}>
+            Projects
+          </div>
         </Link>
         <Link to="/skills">
-          <div className="h_elem">Skills</div>
+          <div className={pageArea === "/skills" ? "h_elem_loc" : "h_elem"}>
+            Skills
+          </div>
         </Link>
         <Link to="/guestbook">
-          <div className="h_elem">Guestbook</div>
+          <div className={pageArea === "/guestbook" ? "h_elem_loc" : "h_elem"}>
+            Guestbook
+          </div>
         </Link>
         <Link to="/more">
-          <div className="h_elem">More</div>
+          <div className={pageArea === "/more" ? "h_elem_loc" : "h_elem"}>
+            More
+          </div>
         </Link>
       </div>
       <div

@@ -38,11 +38,17 @@ const Projects = () => {
               </div>
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.14.35_lb68p4.png"
-                alt="rawg"
-                width="120"
-              />
+              <a
+                href="https://rawg-rockdean.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.14.35_lb68p4.png"
+                  alt="rawg"
+                  width="120"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -74,11 +80,17 @@ const Projects = () => {
               </div>
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.15.04_c565pe.png"
-                alt="vinted"
-                width="120"
-              />
+              <a
+                href="https://vinted-rockdean.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.15.04_c565pe.png"
+                  alt="vinted"
+                  width="120"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -103,16 +115,22 @@ const Projects = () => {
                 items
               </div>
               <div className="p_features">
-                Features : Browsing, Offer creation, Buy, Login...
+                Features : Add items, remove items from basket, price update...
               </div>
               <div className="p_stack">Stack : NodeJS, ReactJS, Render</div>
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.16.10_lh8fsy.png"
-                alt="deliveroo"
-                width="120"
-              />
+              <a
+                href="https://deliveroo-rockdean.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.16.10_lh8fsy.png"
+                  alt="deliveroo"
+                  width="120"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -141,11 +159,17 @@ const Projects = () => {
               </div>
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.16.48_lah9hv.png"
-                alt="marvel"
-                width="120"
-              />
+              <a
+                href="https://marvel-rockdean.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.16.48_lah9hv.png"
+                  alt="marvel"
+                  width="120"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -170,11 +194,17 @@ const Projects = () => {
               <div className="p_stack">Stack : HTML, CSS, Netlify</div>
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.17.13_bez0xd.png"
-                alt="tripadvisor"
-                width="120"
-              />
+              <a
+                href="https://tripadvisor-rockdean.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.17.13_bez0xd.png"
+                  alt="tripadvisor"
+                  width="120"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -206,11 +236,17 @@ const Projects = () => {
               </div>
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673544644/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.29.59_niqixe.png"
-                alt="airbnb"
-                width="120"
-              />
+              <a
+                href="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673544644/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.29.59_niqixe.png"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673544644/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.29.59_niqixe.png"
+                  alt="airbnb"
+                  width="120"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -233,11 +269,17 @@ const Projects = () => {
               <div className="p_stack">Stack : NodeJS, ReactJS, Postman</div>
             </div>
             <div>
-              <img
-                src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.17.37_ak5o35.png"
-                alt="sixt"
-                width="120"
-              />
+              <a
+                href="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.17.37_ak5o35.png"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.17.37_ak5o35.png"
+                  alt="sixt"
+                  width="120"
+                />
+              </a>
             </div>
           </div>
         </div>

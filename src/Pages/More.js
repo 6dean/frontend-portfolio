@@ -50,7 +50,7 @@ const More = () => {
           I left school at 18 and got into the professional world through
           several odd jobs. Then I found stability at the RATP, a public
           transport company. At the same time, I was following the tech universe
-          and all its novelties with the idea to work in it.
+          and all its news with the idea to work in it.
         </div>
       </div>
       <div className="sub_title">Education</div>

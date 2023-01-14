@@ -31,6 +31,17 @@ header {
   opacity: 60%;
   margin-right: 10px;
   padding: 10px 5px 5px 5px;
+  box-sizing: border-box;
+}
+
+.h_elem_loc {
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  opacity: 90%;
+  margin-right: 10px;
+  padding: 10px 5px 5px 5px;
+  box-sizing: border-box;
 }
 
 .h_elem:hover {
@@ -77,6 +88,10 @@ header {
   padding-top: 60px;
   display: flex;
   justify-content: space-between;
+}
+
+.text_id {
+  border: 1px solid red;
 }
 
 .name {
@@ -166,22 +181,41 @@ header {
   flex: 1;
   border: 4px solid;
   border-radius: 50%;
-  border-image-source: linear-gradient(to bottom left, rgb(5, 13, 89), #0059ff);
+  border-image-source: linear-gradient(
+    to bottom left,
+    rgb(92, 92, 92),
+    #000000
+  );
   border-image-slice: 1;
   transition: border-image-source 0.9s;
   margin-right: 18px;
-  padding: 10px;
-  height: 200px;
+  padding: 15px;
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.img_card {
+  display: flex;
+  justify-content: center;
+}
+
+.img_card img {
+  display: flex;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
 .card_fp:hover {
+  transition: border-image-source 0.9s;
   border-image-source: linear-gradient(
-    to bottom,
-    rgb(255, 1, 1),
-    rgb(45, 45, 45)
+    to left bottom,
+    rgb(255, 0, 0),
+    rgb(81, 255, 0),
+    rgb(49, 136, 243),
+    rgb(255, 242, 0),
+    rgb(153, 139, 164)
   );
   cursor: pointer;
 }
@@ -189,22 +223,28 @@ header {
 .card__fp {
   flex: 1;
   border: 4px solid;
-  border-image-source: linear-gradient(to top left, #007782, #afaeae);
+  border-radius: 10px;
+  border-image: linear-gradient(to bottom left, rgb(92, 92, 92), #000000);
   border-image-slice: 1;
   transition: border-image-source 0.9s;
   margin-right: 10px;
   margin-left: 10px;
-  padding: 10px;
+  padding: 15px;
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .card__fp:hover {
+  transition: border-image-source 0.9s;
   border-image-source: linear-gradient(
-    to bottom,
-    rgb(255, 128, 1),
-    rgb(45, 45, 45)
+    to left bottom,
+    rgb(255, 0, 0),
+    rgb(81, 255, 0),
+    rgb(49, 136, 243),
+    rgb(255, 242, 0),
+    rgb(153, 139, 164)
   );
   cursor: pointer;
 }
@@ -212,21 +252,30 @@ header {
 .card___fp {
   flex: 1;
   border: 4px solid;
-  border-image-source: linear-gradient(to top right, #00fbff, #401a2d);
+  border-image-source: linear-gradient(
+    to bottom left,
+    rgb(92, 92, 92),
+    #000000
+  );
   border-image-slice: 1;
   transition: border-image-source 0.9s;
   margin-left: 18px;
-  padding: 10px;
+  padding: 15px;
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .card___fp:hover {
+  transition: border-image-source 0.9s;
   border-image-source: linear-gradient(
-    to bottom,
-    rgb(69, 255, 1),
-    rgb(45, 45, 45)
+    to left bottom,
+    rgb(255, 0, 0),
+    rgb(81, 255, 0),
+    rgb(49, 136, 243),
+    rgb(255, 242, 0),
+    rgb(153, 139, 164)
   );
   cursor: pointer;
 }
@@ -346,6 +395,17 @@ header {
 .link_more:hover {
   text-decoration: underline;
   color: #0059ff;
+}
+
+.modal_img {
+  display: flex;
+  object-fit: cover;
+  border: 1px solid red;
+}
+
+.modal_img img {
+  display: flex;
+  object-fit: contain;
 }
 
 footer {

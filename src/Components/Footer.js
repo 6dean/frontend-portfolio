@@ -57,6 +57,7 @@ const Footer = () => {
         >
           <div className="f_description">Code Source</div>
         </a>
+        <div className="f_description">My Setup</div>
       </div>
     </footer>
   );
