@@ -38,11 +38,11 @@ const More = () => {
           <li className="list_li">
             <a
               className="link_more"
-              href="mailto:ferdjallahrockdean@gmail.com?Subject=Hello%20Rockdean%20from%20RF%20Portfolio!"
+              href="https://www.instagram.com/r0ckdean/"
               target="_blank"
               rel="noreferrer"
             >
-              Gmail
+              Instagram
             </a>
           </li>
           <li className="list_li">
@@ -52,7 +52,17 @@ const More = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Instagram
+              Resume
+            </a>
+          </li>
+          <li className="list_li">
+            <a
+              className="link_more"
+              href="mailto:ferdjallahrockdean@gmail.com?Subject=Hello%20Rockdean%20from%20RF%20Portfolio!"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Email
             </a>
           </li>
         </div>

@@ -60,7 +60,7 @@ const Setup = () => {
           <li className="list_set">Apple iPhone 13 Pro 256GO 📱</li>
           <li className="list_set">Apple Airpods 2nd Generation</li>
           <li className="list_set">
-            Electric Bicycle Eleglide T1 Max Speed 32Kmh 🚲
+            Electric Bicycle Eleglide T1 (32Kmh) 🚴🏼‍♂️💨
           </li>
         </div>
       </div>
