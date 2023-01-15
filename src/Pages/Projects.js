@@ -1,7 +1,32 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const Projects = () => {
+  const [data, setData] = useState({});
+  const [IsLoading, setIsLoading] = useState(false);
+
+  const fetchData = async () => {
+    const response = await axios.get("http://localhost:3001/allprojects");
+    setData(response.data);
+    setIsLoading(true);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  // ADD project or Update VIEWS
+  const Count = async (name, id) => {
+    await axios.put(`http://localhost:3001/projects`, {
+      id: id,
+      project: name,
+      visit: 1,
+    });
+  };
+
+  console.log(data);
+
   return (
     <>
       <div className="name_page">Projects</div>
@@ -14,7 +39,12 @@ const Projects = () => {
       <div className="listing_p_card">
         <div className="p_card">
           <div className="p_project">
-            <div className="sub_project">
+            <div
+              className="sub_project"
+              onClick={() => {
+                Count("RAWG", "00001");
+              }}
+            >
               <a
                 href="https://rawg-rockdean.netlify.app/"
                 target="_blank"
@@ -24,7 +54,7 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">views </div>
+            <div className="sub-view">{IsLoading && data[0].visit} views</div>
           </div>
           <div className="p_project">
             <div className="p_description">
@@ -37,7 +67,11 @@ const Projects = () => {
                 Stack : NodeJS, ReactJS, MongoDB, GitHub, Netlify, NorthFlank
               </div>
             </div>
-            <div>
+            <div
+              onClick={() => {
+                Count("RAWG", "00001");
+              }}
+            >
               <a
                 href="https://rawg-rockdean.netlify.app/"
                 target="_blank"
@@ -54,7 +88,12 @@ const Projects = () => {
         </div>
         <div className="p_card">
           <div className="p_project">
-            <div className="sub_project">
+            <div
+              className="sub_project"
+              onClick={() => {
+                Count("Vinted", "00002");
+              }}
+            >
               <a
                 href="https://vinted-rockdean.netlify.app/"
                 target="_blank"
@@ -64,7 +103,7 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">views </div>
+            <div className="sub-view">{IsLoading && data[1].visit} views</div>
           </div>
           <div className="p_project">
             <div className="p_description">
@@ -79,7 +118,11 @@ const Projects = () => {
                 Stack : NodeJS, ReactJS, MongoDB, Stripe, Forest Admin
               </div>
             </div>
-            <div>
+            <div
+              onClick={() => {
+                Count("Vinted", "00002");
+              }}
+            >
               <a
                 href="https://vinted-rockdean.netlify.app/"
                 target="_blank"
@@ -96,7 +139,12 @@ const Projects = () => {
         </div>
         <div className="p_card">
           <div className="p_project">
-            <div className="sub_project">
+            <div
+              className="sub_project"
+              onClick={() => {
+                Count("Deliveroo", "00003");
+              }}
+            >
               <a
                 href="https://deliveroo-rockdean.netlify.app/"
                 target="_blank"
@@ -106,7 +154,7 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">views </div>
+            <div className="sub-view">{IsLoading && data[2].visit} views</div>
           </div>
           <div className="p_project">
             <div className="p_description">
@@ -119,7 +167,11 @@ const Projects = () => {
               </div>
               <div className="p_stack">Stack : NodeJS, ReactJS, Render</div>
             </div>
-            <div>
+            <div
+              onClick={() => {
+                Count("Deliveroo", "00003");
+              }}
+            >
               <a
                 href="https://deliveroo-rockdean.netlify.app/"
                 target="_blank"
@@ -136,7 +188,12 @@ const Projects = () => {
         </div>
         <div className="p_card">
           <div className="p_project">
-            <div className="sub_project">
+            <div
+              className="sub_project"
+              onClick={() => {
+                Count("Marvel", "00004");
+              }}
+            >
               <a
                 href="https://marvel-rockdean.netlify.app/"
                 target="_blank"
@@ -146,7 +203,7 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">views </div>
+            <div className="sub-view">{IsLoading && data[3].visit} views</div>
           </div>
           <div className="p_project">
             <div className="p_description">
@@ -158,7 +215,11 @@ const Projects = () => {
                 Stack : NodeJS, ReactJS, Netlify, NorthFlank
               </div>
             </div>
-            <div>
+            <div
+              onClick={() => {
+                Count("Marvel", "00004");
+              }}
+            >
               <a
                 href="https://marvel-rockdean.netlify.app/"
                 target="_blank"
@@ -175,7 +236,12 @@ const Projects = () => {
         </div>
         <div className="p_card">
           <div className="p_project">
-            <div className="sub_project">
+            <div
+              className="sub_project"
+              onClick={() => {
+                Count("Tripadvisor", "00005");
+              }}
+            >
               <a
                 href="https://tripadvisor-rockdean.netlify.app/"
                 target="_blank"
@@ -185,7 +251,7 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">views </div>
+            <div className="sub-view">{IsLoading && data[4].visit} views</div>
           </div>
           <div className="p_project">
             <div className="p_description">
@@ -193,7 +259,11 @@ const Projects = () => {
               <div className="p_features">Features : Responsive, Carousel</div>
               <div className="p_stack">Stack : HTML, CSS, Netlify</div>
             </div>
-            <div>
+            <div
+              onClick={() => {
+                Count("Tripadvisor", "00005");
+              }}
+            >
               <a
                 href="https://tripadvisor-rockdean.netlify.app/"
                 target="_blank"
@@ -210,7 +280,12 @@ const Projects = () => {
         </div>
         <div className="p_card">
           <div className="p_project">
-            <div className="sub_project">
+            <div
+              className="sub_project"
+              onClick={() => {
+                Count("AirBnB", "00006");
+              }}
+            >
               <a
                 href="https://tinyurl.com/airbnbEXPO"
                 target="_blank"
@@ -220,7 +295,7 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">views </div>
+            <div className="sub-view">{IsLoading && data[5].visit} views</div>
           </div>
           <div className="p_project">
             <div className="p_description">
@@ -235,7 +310,11 @@ const Projects = () => {
                 Stack : React Native, Expo, Xcode, Android Studio
               </div>
             </div>
-            <div>
+            <div
+              onClick={() => {
+                Count("AirBnb", "00006");
+              }}
+            >
               <a
                 href="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673544644/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.29.59_niqixe.png"
                 target="_blank"
@@ -252,10 +331,22 @@ const Projects = () => {
         </div>
         <div className="p_card">
           <div className="p_project">
-            <div className="sub_project">
-              Sixt <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
+            <div
+              className="sub_project"
+              onClick={() => {
+                Count("Sixt", "00007");
+              }}
+            >
+              <a
+                href="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.17.37_ak5o35.png"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Sixt{" "}
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
+              </a>
             </div>
-            <div className="sub-view">views </div>
+            <div className="sub-view">{IsLoading && data[6].visit} views</div>
           </div>
           <div className="p_project">
             <div className="p_description">
@@ -268,7 +359,11 @@ const Projects = () => {
               </div>
               <div className="p_stack">Stack : NodeJS, ReactJS, Postman</div>
             </div>
-            <div>
+            <div
+              onClick={() => {
+                Count("Sixt", "00007");
+              }}
+            >
               <a
                 href="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.17.37_ak5o35.png"
                 target="_blank"

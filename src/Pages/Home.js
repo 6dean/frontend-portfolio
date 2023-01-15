@@ -1,9 +1,23 @@
 import { Link } from "react-router-dom";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
+import { useState, useEffect } from "react";
 
 const Home = () => {
+  const [data, setData] = useState({});
+  const [IsLoading, setIsLoading] = useState(false);
+
+  const fetchData = async () => {
+    const response = await axios.get("http://localhost:3001/allprojects");
+    setData(response.data);
+    setIsLoading(true);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="card_id">
@@ -54,7 +68,8 @@ const Home = () => {
             </a>
           </div>
           <div>
-            <FontAwesomeIcon icon={faEye} size="lg" />
+            <FontAwesomeIcon icon={faEye} size="lg" />{" "}
+            {IsLoading && data[0].visit}
           </div>
         </div>
         <div className="card__fp">
@@ -86,7 +101,8 @@ const Home = () => {
             </a>
           </div>
           <div>
-            <FontAwesomeIcon icon={faEye} size="lg" />
+            <FontAwesomeIcon icon={faEye} size="lg" />{" "}
+            {IsLoading && data[1].visit}
           </div>
         </div>
         <div className="card___fp">
@@ -116,7 +132,8 @@ const Home = () => {
             </a>
           </div>
           <div>
-            <FontAwesomeIcon icon={faEye} size="lg" />
+            <FontAwesomeIcon icon={faEye} size="lg" />{" "}
+            {IsLoading && data[1].visit}
           </div>
         </div>
       </div>
