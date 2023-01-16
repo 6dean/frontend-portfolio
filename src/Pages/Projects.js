@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Count from "../Functions/Count";
 
 const Projects = () => {
   const [data, setData] = useState({});
@@ -10,20 +11,12 @@ const Projects = () => {
   const fetchData = async () => {
     const response = await axios.get("http://localhost:3001/allprojects");
     setData(response.data);
-    setIsLoading(true);
+    data && setIsLoading(true);
   };
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // ADD project or Update VIEWS
-  const Count = async (name, id) => {
-    await axios.put(`http://localhost:3001/projects`, {
-      id: id,
-      project: name,
-      visit: 1,
-    });
-  };
 
   console.log(data);
 

@@ -1,4 +1,20 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 const Guestbook = () => {
+  const [data, setData] = useState({});
+  const [IsLoading, setIsLoading] = useState(false);
+
+  const fetchData = async () => {
+    const response = await axios.get("http://localhost:3001/comment");
+    setData(response.data);
+    data && setIsLoading(true);
+  };
+  useEffect(() => {
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
       <div className="name_page">Guestbook</div>

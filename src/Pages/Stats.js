@@ -3,11 +3,14 @@ import React, { useState, useEffect } from "react";
 
 const Stats = () => {
   const [data, setData] = useState({});
+  const [data_, setData_] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchData = async () => {
     const response = await axios.get("https://api.github.com/users/6dean");
+    const response_ = await axios.get("http://localhost:3001/allprojects");
     setData(response.data);
+    setData_(response_.data);
     setIsLoading(true);
   };
 
@@ -28,7 +31,7 @@ const Stats = () => {
       <div className="listing_ab">
         <div className="card_ab">
           <div className="stat">Projects</div>
-          <div className="count">{"..."}</div>
+          <div className="count">{isLoading ? data_.length : "..."}</div>
         </div>
         <div className="card_ab">
           <div className="stat">Public Repositories</div>

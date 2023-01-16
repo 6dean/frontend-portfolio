@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { useState, useEffect } from "react";
+import Count from "../Functions/Count";
 
 const Home = () => {
   const [data, setData] = useState({});
@@ -12,10 +13,11 @@ const Home = () => {
   const fetchData = async () => {
     const response = await axios.get("http://localhost:3001/allprojects");
     setData(response.data);
-    setIsLoading(true);
+    data && setIsLoading(true);
   };
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -23,7 +25,7 @@ const Home = () => {
       <div className="card_id">
         <div className="text_id">
           <div className="name">Rockdean Ferdjallah</div>
-          <div className="job">JavaScript Developer</div>
+          <div className="job">FullStack JavaScript Developer</div>
           <div className="div_description">
             <div className="description">
               I am a web developer passionate about coding, the geek universe
@@ -47,6 +49,9 @@ const Home = () => {
               href="https://rawg-rockdean.netlify.app/"
               target="_blank"
               rel="noreferrer"
+              onClick={() => {
+                Count("RAWG", "00001");
+              }}
             >
               <div className="card_title">RAWG.io</div>
             </a>
@@ -59,6 +64,9 @@ const Home = () => {
               href="https://rawg-rockdean.netlify.app/"
               target="_blank"
               rel="noreferrer"
+              onClick={() => {
+                Count("RAWG", "00001");
+              }}
             >
               <img
                 src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.14.35_lb68p4.png"
@@ -67,9 +75,9 @@ const Home = () => {
               />
             </a>
           </div>
-          <div>
+          <div className="h_count">
             <FontAwesomeIcon icon={faEye} size="lg" />{" "}
-            {IsLoading && data[0].visit}
+            <p className="count_style">{IsLoading && data[0].visit}</p>
           </div>
         </div>
         <div className="card__fp">
@@ -78,6 +86,9 @@ const Home = () => {
               href="https://vinted-rockdean.netlify.app/"
               target="_blank"
               rel="noreferrer"
+              onClick={() => {
+                Count("Vinted", "00002");
+              }}
             >
               <div className="card_title">Vinted</div>
             </a>
@@ -92,6 +103,9 @@ const Home = () => {
               href="https://vinted-rockdean.netlify.app/"
               target="_blank"
               rel="noreferrer"
+              onClick={() => {
+                Count("Vinted", "00002");
+              }}
             >
               <img
                 src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.15.04_c565pe.png"
@@ -100,9 +114,9 @@ const Home = () => {
               />{" "}
             </a>
           </div>
-          <div>
+          <div className="h_count">
             <FontAwesomeIcon icon={faEye} size="lg" />{" "}
-            {IsLoading && data[1].visit}
+            <p className="count_style">{IsLoading && data[1].visit}</p>
           </div>
         </div>
         <div className="card___fp">
@@ -111,6 +125,9 @@ const Home = () => {
               href="https://deliveroo-rockdean.netlify.app/"
               target="_blank"
               rel="noreferrer"
+              onClick={() => {
+                Count("Deliveroo", "00003");
+              }}
             >
               <div className="card_title">Deliveroo</div>
             </a>
@@ -123,6 +140,9 @@ const Home = () => {
               href="https://deliveroo-rockdean.netlify.app/"
               target="_blank"
               rel="noreferrer"
+              onClick={() => {
+                Count("Deliveroo", "00003");
+              }}
             >
               <img
                 src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.16.10_lh8fsy.png"
@@ -131,9 +151,9 @@ const Home = () => {
               />
             </a>
           </div>
-          <div>
+          <div className="h_count">
             <FontAwesomeIcon icon={faEye} size="lg" />{" "}
-            {IsLoading && data[1].visit}
+            <p className="count_style">{IsLoading && data[2].visit}</p>
           </div>
         </div>
       </div>
