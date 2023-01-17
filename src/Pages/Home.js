@@ -56,7 +56,7 @@ const Home = () => {
               <div className="card_title">RAWG.io</div>
             </a>
             <div className="card_description">
-              Videogames platform with API getting more than 830.000 references
+              Videogames platform with API holding more than 830.000 references
             </div>
           </div>
           <div className="img_card">

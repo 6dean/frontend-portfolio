@@ -36,7 +36,10 @@ function App() {
             <Route path="/guestbook" element={<Guestbook />}></Route>
             <Route path="/stats" element={<Stats />}></Route>
             <Route path="/more" element={<More />}></Route>
-            <Route path="/setup" element={<Setup />}></Route>
+            <Route
+              path="/setup"
+              element={<Setup darkMode={darkMode} />}
+            ></Route>
           </Routes>
           <Footer />
         </Router>

@@ -1,4 +1,4 @@
-const Setup = () => {
+const Setup = ({ darkMode }) => {
   return (
     <>
       <div className="name_page">Setup</div>
@@ -7,17 +7,23 @@ const Setup = () => {
           I am a geek after all, why not talk about my setup ?
         </div>
       </div>
-      <div className="container">
-        <img
-          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673734327/my-content/iconsRF/87292a6c9913d973b16852e7aaeaa842_kbjhiu.jpg"
-          alt=""
-          width="100"
-        />
-        <img
-          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673734327/my-content/iconsRF/87292a6c9913d973b16852e7aaeaa842_kbjhiu.jpg"
-          alt=""
-          width="100"
-        />
+      <div className="container_setup">
+        {darkMode ? (
+          <img
+            src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673950271/my-content/iconsRF/v2_ia9imk.jpg"
+            alt="setup_dark"
+          />
+        ) : (
+          <img
+            src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673950271/my-content/iconsRF/v3_k4ncrq.jpg"
+            alt="setup"
+          />
+        )}
+      </div>
+      <div>
+        <p className="detail_img">
+          Photos from my personal setup (Light : Work / Dark : Geek)
+        </p>
       </div>
       <div className="set_title">Desktop / Office</div>
       <div>
