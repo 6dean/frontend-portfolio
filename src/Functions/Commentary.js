@@ -1,7 +1,13 @@
 import axios from "axios";
 
 // ADD comment
-const Commentary = async (username, email, comment, date, setDataError) => {
+const Commentary = async (username, email, comment, setDataError) => {
+  const Today = new Date().toLocaleDateString().slice(0, 2);
+  const Month = new Date().toLocaleDateString("en-US", { month: "long" });
+  const Year = new Date().toLocaleDateString().slice(6, 10);
+  const Hour = new Date().toLocaleTimeString().slice(0, 5);
+  const date = Today + " " + Month + " " + Year + " " + Hour;
+
   const myString = username;
 
   if (myString.search(" ") !== -1) {
