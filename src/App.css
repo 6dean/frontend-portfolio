@@ -26,6 +26,8 @@ button {
 input {
   border: none;
   outline: none;
+  padding: 4px;
+  opacity: 85%;
 }
 
 header {
@@ -545,6 +547,16 @@ header {
   opacity: 50%;
 }
 
+.limit_div {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 400;
+  padding-top: 5px;
+  font-size: 12px;
+  opacity: 70%;
+}
+
 .user_input {
   display: flex;
   border: 1px solid red;
@@ -552,14 +564,12 @@ header {
 }
 
 .user_input_text {
+  margin-top: 10px;
   display: flex;
-  border: 1px solid rgb(0, 64, 255);
 }
 
 .user_input_comment {
   display: flex;
-  border: 1px solid rgb(0, 255, 0);
-  width: 100%;
 }
 
 .text__input {
@@ -576,9 +586,16 @@ header {
 }
 
 .box_comment {
+  margin-top: 10px;
+
   display: flex;
   flex: 1;
-  width: 100%;
+}
+
+input::placeholder {
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 15px;
+  opacity: 40%;
 }
 
 .style_inf_text {
@@ -597,19 +614,42 @@ header {
 }
 
 .button_accept {
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 5px;
-  background-color: rgba(128, 128, 128, 0.294);
+  background-color: rgba(165, 165, 165, 0.294);
   border: none;
   font-family: "Vazirmatn", sans-serif;
   font-weight: 600;
   width: 120px;
   text-align: center;
+  border-radius: 5px;
+}
+
+.button_done {
+  margin-top: 15px;
+  padding: 5px;
+  background-color: rgba(80, 233, 14, 0.294);
+  border: none;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 600;
+  width: 120px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.error {
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 90%;
+  color: red;
+  padding-top: 3px;
 }
 
 .button_accept:hover {
   cursor: pointer;
-  opacity: 70%;
+  opacity: 90%;
+  box-shadow: 0px 0px 10px rgba(73, 116, 202, 0.751);
 }
 
 .text_inf {
