@@ -21,18 +21,20 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const fetchDataSpotify = async () => {
-      const responseSpotify = await axios.post(
-        "http://localhost:3001/spotify",
-        {
-          tokenSpotify: tokenSpotify,
-        }
-      );
-      setDataSpotify(responseSpotify.data.tracks.items);
-    };
-    setTimeout(() => {
-      fetchDataSpotify();
-    }, 800);
+    if (tokenSpotify) {
+      const fetchDataSpotify = async () => {
+        const responseSpotify = await axios.post(
+          "http://localhost:3001/spotify",
+          {
+            tokenSpotify: tokenSpotify,
+          }
+        );
+        setDataSpotify(responseSpotify.data.tracks.items);
+      };
+      setTimeout(() => {
+        fetchDataSpotify();
+      }, 800);
+    }
   });
 
   useEffect(() => {
@@ -251,12 +253,19 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="title">Spotify</div>
+      <div className="title">
+        <img
+          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1674156658/my-content/iconsRF/SPOTIFY_nexesj.png"
+          alt="spotify"
+          width="20"
+        />{" "}
+        Spotify
+      </div>
       <div className="div_description">
         <div className="description">
           I listen music a lot, so I'm going to share with you some cool musics
           I like to code with ! This is directly from my Spotify, so it's
-          updated frequently.
+          updated frequently and automatically.
         </div>
       </div>
       <div className="elem_song">

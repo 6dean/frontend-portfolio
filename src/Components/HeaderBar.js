@@ -24,45 +24,51 @@ const HeaderBar = ({ darkMode, setDarkMode }) => {
   }, [location.pathname]);
 
   return (
-    <header>
-      <div className="h_list">
-        <Link to="/">
-          <div className={pageArea === "/" ? "h_elem_loc" : "h_elem"}>Home</div>
-        </Link>
-        <Link to="/projects">
-          <div className={pageArea === "/projects" ? "h_elem_loc" : "h_elem"}>
-            Projects
-          </div>
-        </Link>
-        <Link to="/skills">
-          <div className={pageArea === "/skills" ? "h_elem_loc" : "h_elem"}>
-            Skills
-          </div>
-        </Link>
-        <Link to="/guestbook">
-          <div className={pageArea === "/guestbook" ? "h_elem_loc" : "h_elem"}>
-            Guestbook
-          </div>
-        </Link>
-        <Link to="/more">
-          <div className={pageArea === "/more" ? "h_elem_loc" : "h_elem"}>
-            More
-          </div>
-        </Link>
-      </div>
-      <div
-        className={darkMode ? "h_mode_light" : "h_mode"}
-        onClick={() => {
-          darkMode ? setDarkMode(false) : setDarkMode(true);
-        }}
-      >
-        {darkMode ? (
-          <FontAwesomeIcon icon={faSun} size="lg" />
-        ) : (
-          <FontAwesomeIcon icon={faMoon} size="lg" />
-        )}
-      </div>
-    </header>
+    <div className="headerBar">
+      <header>
+        <div className="h_list">
+          <Link to="/">
+            <div className={pageArea === "/" ? "h_elem_loc" : "h_elem"}>
+              Home
+            </div>
+          </Link>
+          <Link to="/projects">
+            <div className={pageArea === "/projects" ? "h_elem_loc" : "h_elem"}>
+              Projects
+            </div>
+          </Link>
+          <Link to="/skills">
+            <div className={pageArea === "/skills" ? "h_elem_loc" : "h_elem"}>
+              Skills
+            </div>
+          </Link>
+          <Link to="/guestbook">
+            <div
+              className={pageArea === "/guestbook" ? "h_elem_loc" : "h_elem"}
+            >
+              Guestbook
+            </div>
+          </Link>
+          <Link to="/more">
+            <div className={pageArea === "/more" ? "h_elem_loc" : "h_elem"}>
+              More
+            </div>
+          </Link>
+        </div>
+        <div
+          className={darkMode ? "h_mode_light" : "h_mode"}
+          onClick={() => {
+            darkMode ? setDarkMode(false) : setDarkMode(true);
+          }}
+        >
+          {darkMode ? (
+            <FontAwesomeIcon icon={faSun} size="lg" />
+          ) : (
+            <FontAwesomeIcon icon={faMoon} size="lg" />
+          )}
+        </div>
+      </header>
+    </div>
   );
 };
 
