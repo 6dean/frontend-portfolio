@@ -2,8 +2,8 @@ import axios from "axios";
 import qs from "qs";
 import { Buffer } from "buffer";
 
-const client_id = "aa989ba7aa2243899f35f44ff371cb75";
-const client_secret = "f643e3d86174433e8d580cbcf16b7596";
+const client_id = process.env.REACT_APP_SPOTIFY_API_ID;
+const client_secret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
 const auth_token = Buffer.from(
   `${client_id}:${client_secret}`,
   "utf-8"

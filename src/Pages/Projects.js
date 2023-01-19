@@ -18,8 +18,6 @@ const Projects = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(data);
-
   return (
     <>
       <div className="name_page">Projects</div>
