@@ -443,6 +443,10 @@ header {
   opacity: 85%;
 }
 
+.img_project {
+  padding-left: 10px;
+}
+
 .link_more {
   font-weight: 600;
 }

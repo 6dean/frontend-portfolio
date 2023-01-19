@@ -7,15 +7,14 @@ import Count from "../Functions/Count";
 const Projects = () => {
   const [data, setData] = useState({});
   const [IsLoading, setIsLoading] = useState(false);
-
-  const fetchData = async () => {
-    const response = await axios.get("http://localhost:3001/allprojects");
-    setData(response.data);
-    data && setIsLoading(true);
-  };
   useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get("http://localhost:3001/allprojects");
+      setData(response.data);
+      setIsLoading(true);
+    };
+
     fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -59,6 +58,7 @@ const Projects = () => {
               </div>
             </div>
             <div
+              className="img_project"
               onClick={() => {
                 Count("RAWG", "00001");
               }}
@@ -110,6 +110,7 @@ const Projects = () => {
               </div>
             </div>
             <div
+              className="img_project"
               onClick={() => {
                 Count("Vinted", "00002");
               }}
@@ -159,6 +160,7 @@ const Projects = () => {
               <div className="p_stack">Stack : NodeJS, ReactJS, Render</div>
             </div>
             <div
+              className="img_project"
               onClick={() => {
                 Count("Deliveroo", "00003");
               }}
@@ -207,6 +209,7 @@ const Projects = () => {
               </div>
             </div>
             <div
+              className="img_project"
               onClick={() => {
                 Count("Marvel", "00004");
               }}
@@ -251,6 +254,7 @@ const Projects = () => {
               <div className="p_stack">Stack : HTML, CSS, Netlify</div>
             </div>
             <div
+              className="img_project"
               onClick={() => {
                 Count("Tripadvisor", "00005");
               }}
@@ -302,6 +306,7 @@ const Projects = () => {
               </div>
             </div>
             <div
+              className="img_project"
               onClick={() => {
                 Count("AirBnb", "00006");
               }}
@@ -351,6 +356,7 @@ const Projects = () => {
               <div className="p_stack">Stack : NodeJS, ReactJS, Postman</div>
             </div>
             <div
+              className="img_project"
               onClick={() => {
                 Count("Sixt", "00007");
               }}

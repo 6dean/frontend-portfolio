@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
-import { useState } from "react";
 
 const HeaderResponsive = ({
   darkMode,

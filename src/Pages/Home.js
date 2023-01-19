@@ -35,11 +35,12 @@ const Home = () => {
         fetchDataSpotify();
       }, 800);
     }
-  });
+  }, [tokenSpotify]);
 
   useEffect(() => {
     getAuth(setTokenSpotify);
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
