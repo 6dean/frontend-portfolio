@@ -5,19 +5,39 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { useState, useEffect } from "react";
 import Count from "../Functions/Count";
+import getAuth from "../Functions/GetAuth";
 
 const Home = () => {
   const [data, setData] = useState({});
+  const [dataSpotify, setDataSpotify] = useState({});
   const [IsLoading, setIsLoading] = useState(false);
+  const [tokenSpotify, setTokenSpotify] = useState("");
 
   const fetchData = async () => {
     const response = await axios.get("http://localhost:3001/allprojects");
+
     setData(response.data);
-    data && setIsLoading(true);
+    setIsLoading(true);
   };
+
   useEffect(() => {
+    const fetchDataSpotify = async () => {
+      const responseSpotify = await axios.post(
+        "http://localhost:3001/spotify",
+        {
+          tokenSpotify: tokenSpotify,
+        }
+      );
+      setDataSpotify(responseSpotify.data.tracks.items);
+    };
+    setTimeout(() => {
+      fetchDataSpotify();
+    }, 800);
+  });
+
+  useEffect(() => {
+    getAuth(setTokenSpotify);
     fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -232,6 +252,34 @@ const Home = () => {
         </div>
       </div>
       <div className="title">Spotify</div>
+      <div className="div_description">
+        <div className="description">
+          I listen music a lot, so I'm going to share with you some cool musics
+          I like to code with ! This is directly from my Spotify, so it's
+          updated frequently.
+        </div>
+      </div>
+      <div className="elem_song">
+        {dataSpotify.length > 1 &&
+          dataSpotify.map((elem, i) => {
+            return (
+              <div key={i} className="spotify_elem_user">
+                <div className="id_img">
+                  <img src={elem.track.album.images[1].url} alt="img_music" />
+                </div>
+                <div className="title_singer">
+                  <div className="title_style">{elem.track.name}</div>
+                  <div className="separator_spotify"></div>
+                  <div className="text__date">
+                    <div className="artist_style">
+                      {elem.track.artists[0].name}{" "}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+      </div>
     </>
   );
 };

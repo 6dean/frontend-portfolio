@@ -42,22 +42,20 @@ const Setup = ({ darkMode }) => {
       </div>
       <div className="set_title">Audio / Video</div>
       <div className="listing_contact">
-        <li className="list_set">LG SUPER UHD 4K Nano Cell Dolby 48"</li>
+        <li className="list_set">LG SUPER UHD 4K Nano Cell 48"</li>
         <li className="list_set">Harmann-Kardon NOVA</li>
       </div>
       <div className="set_title">Coding</div>
       <div>
         <div className="listing_contact">
-          <li className="list_set">
-            Apple Macbook M2 13.6' 250GO 8GO - 2022 💻
-          </li>
+          <li className="list_set">Apple Macbook M2 13.6' 2022 💻</li>
           <li className="list_set">ASUS G752 17' with Linux uBuntu 🐧</li>
         </div>
       </div>
       <div className="set_title">Others</div>
       <div>
         <div className="listing_contact">
-          <li className="list_set">Internet fiber connection 500MB/s 🚀</li>
+          <li className="list_set">Internet fiber up to 500MB/s 🚀</li>
           <li className="list_set">SONY PlayStation 5</li>
           <li className="list_set">Headset Turtle Beach Stealth Gen 2</li>
 
@@ -65,9 +63,7 @@ const Setup = ({ darkMode }) => {
           <li className="list_set">3 controllers Xbox One</li>
           <li className="list_set">Apple iPhone 13 Pro 256GO 📱</li>
           <li className="list_set">Apple Airpods 2nd Generation</li>
-          <li className="list_set">
-            Electric Bicycle Eleglide T1 (32Kmh) 🚴🏼‍♂️💨
-          </li>
+          <li className="list_set">Electric Bicycle Eleglide T1 🚴🏼‍♂️💨</li>
         </div>
       </div>
     </>
