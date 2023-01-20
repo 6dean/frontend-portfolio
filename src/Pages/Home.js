@@ -51,7 +51,7 @@ const Home = () => {
         </div>
         <div className="avatar">
           <img
-            src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673734327/my-content/iconsRF/87292a6c9913d973b16852e7aaeaa842_kbjhiu.jpg"
+            src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1674221637/my-content/iconsRF/avatar_k70upw.jpg"
             alt="Dean"
           />
         </div>

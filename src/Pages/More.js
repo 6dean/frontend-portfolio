@@ -158,12 +158,12 @@ const More = () => {
       <div className="title">Photos</div>
       <div className="container">
         <img
-          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673734327/my-content/iconsRF/87292a6c9913d973b16852e7aaeaa842_kbjhiu.jpg"
+          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1674221637/my-content/iconsRF/FaceRevealColor_ia5x7n.jpg"
           alt=""
           width="100"
         />
         <img
-          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673734327/my-content/iconsRF/87292a6c9913d973b16852e7aaeaa842_kbjhiu.jpg"
+          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1674221637/my-content/iconsRF/FaceRevealBlackandWhite_kwtsvy.jpg"
           alt=""
           width="100"
         />
