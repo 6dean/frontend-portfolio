@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.2.1",
     "axios": "^1.2.3",
     "axios-oauth-client": "^2.0.2",
+    "buffer": "^6.0.3",
     "dotenv": "^16.0.3",
     "qs": "^6.11.0",
     "react": "^18.2.0",
