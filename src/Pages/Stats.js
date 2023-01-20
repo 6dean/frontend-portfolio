@@ -8,7 +8,9 @@ const Stats = () => {
 
   const fetchData = async () => {
     const response = await axios.get("https://api.github.com/users/6dean");
-    const response_ = await axios.get("http://localhost:3001/allprojects");
+    const response_ = await axios.get(
+      "https://site--backend-portfolio--6qn7tv96v7tt.code.run/allprojects"
+    );
     setData(response.data);
     setData_(response_.data);
     setIsLoading(true);

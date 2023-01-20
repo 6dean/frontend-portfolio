@@ -11,7 +11,9 @@ const Guestbook = () => {
   const [dataError, setDataError] = useState("");
 
   const fetchData = async () => {
-    const response = await axios.get("http://localhost:3001/allcomments");
+    const response = await axios.get(
+      "https://site--backend-portfolio--6qn7tv96v7tt.code.run/allcomments"
+    );
     setData(response.data);
   };
   useEffect(() => {

@@ -9,7 +9,9 @@ const Projects = () => {
   const [IsLoading, setIsLoading] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:3001/allprojects");
+      const response = await axios.get(
+        "https://site--backend-portfolio--6qn7tv96v7tt.code.run/allprojects"
+      );
       setData(response.data);
       setIsLoading(true);
     };

@@ -14,7 +14,9 @@ const Home = () => {
   const [tokenSpotify, setTokenSpotify] = useState("");
 
   const fetchData = async () => {
-    const response = await axios.get("http://localhost:3001/allprojects");
+    const response = await axios.get(
+      "https://site--backend-portfolio--6qn7tv96v7tt.code.run/allprojects"
+    );
 
     setData(response.data);
     setIsLoading(true);
@@ -24,7 +26,7 @@ const Home = () => {
     if (tokenSpotify) {
       const fetchDataSpotify = async () => {
         const responseSpotify = await axios.post(
-          "http://localhost:3001/spotify",
+          "https://site--backend-portfolio--6qn7tv96v7tt.code.run/spotify",
           {
             tokenSpotify: tokenSpotify,
           }

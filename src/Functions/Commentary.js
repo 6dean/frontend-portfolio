@@ -40,12 +40,15 @@ const Commentary = async (username, email, comment, setDataError) => {
     return null;
   } else {
     try {
-      await axios.put(`http://localhost:3001/comment`, {
-        name: username,
-        email: email,
-        date: date,
-        text: comment,
-      });
+      await axios.put(
+        `https://site--backend-portfolio--6qn7tv96v7tt.code.run/comment`,
+        {
+          name: username,
+          email: email,
+          date: date,
+          text: comment,
+        }
+      );
     } catch (error) {
       setDataError(error.response.data.message);
     }
