@@ -41,7 +41,7 @@ const Home = () => {
             I am currently looking for a 6 month internship . Check my{" "}
             <span>Resume</span> and{" "}
             <Link to="/more">
-              <a href="">
+              <a href="https://tubular-beignet-fd6af9.netlify.app/">
                 <span>More</span>
               </a>
             </Link>{" "}
@@ -238,7 +238,6 @@ const Home = () => {
             <img
               src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618331/my-content/iconsRF/POSTMAN_csedqm.png"
               alt="postman"
-              alt="Node"
               width="40"
             />
           </div>
