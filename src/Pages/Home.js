@@ -39,11 +39,12 @@ const Home = () => {
           </div>
           <div className="description_job">
             I am currently looking for a 6 month internship . Check my{" "}
-            <span>Resume</span> and{" "}
+            <a href="https://tubular-beignet-fd6af9.netlify.app/">
+              <span>Resume</span>
+            </a>{" "}
+            and{" "}
             <Link to="/more">
-              <a href="https://tubular-beignet-fd6af9.netlify.app/">
-                <span>More</span>
-              </a>
+              <span>More</span>
             </Link>{" "}
             !
           </div>
