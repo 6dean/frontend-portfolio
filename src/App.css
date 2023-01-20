@@ -18,6 +18,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 button {
   background-color: none;
   border: none;
@@ -173,6 +178,15 @@ header {
 }
 
 .description {
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 60%;
+  line-height: 1.4;
+}
+
+.description_job {
+  padding-top: 20px;
   font-family: "Vazirmatn", sans-serif;
   font-weight: 400;
   font-size: 16px;

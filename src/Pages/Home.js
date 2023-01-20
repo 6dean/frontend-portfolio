@@ -5,13 +5,10 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { useState, useEffect } from "react";
 import Count from "../Functions/Count";
-import getAuth from "../Functions/GetAuth";
 
 const Home = () => {
   const [data, setData] = useState({});
-  const [dataSpotify, setDataSpotify] = useState({});
   const [IsLoading, setIsLoading] = useState(false);
-  const [tokenSpotify, setTokenSpotify] = useState("");
 
   const fetchData = async () => {
     const response = await axios.get(
@@ -23,24 +20,6 @@ const Home = () => {
   };
 
   useEffect(() => {
-    if (tokenSpotify) {
-      const fetchDataSpotify = async () => {
-        const responseSpotify = await axios.post(
-          "https://site--backend-portfolio--6qn7tv96v7tt.code.run/spotify",
-          {
-            tokenSpotify: tokenSpotify,
-          }
-        );
-        setDataSpotify(responseSpotify.data.tracks.items);
-      };
-      setTimeout(() => {
-        fetchDataSpotify();
-      }, 800);
-    }
-  }, [tokenSpotify]);
-
-  useEffect(() => {
-    getAuth(setTokenSpotify);
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -57,6 +36,16 @@ const Home = () => {
               and videogames. I am constantly evolving to improve my skills and
               take on new challenges in web development.
             </div>
+          </div>
+          <div className="description_job">
+            I am currently looking for a 6 month internship . Check my{" "}
+            <span>Resume</span> and{" "}
+            <Link to="/more">
+              <a href="">
+                <span>More</span>
+              </a>
+            </Link>{" "}
+            !
           </div>
         </div>
         <div className="avatar">
@@ -204,17 +193,17 @@ const Home = () => {
       </div>
       <div className="a_list">
         <div className="listing_cap">
-          <div>Visual Studio Code</div>
+          <div>ReactJS</div>
           <div>
             <img
-              src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618331/my-content/iconsRF/VSC_peiuxk.png"
-              alt="vsc"
+              src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618331/my-content/iconsRF/REACTJS_meqvqz.png"
+              alt="react"
               width="40"
             />
           </div>
         </div>
         <div className="listing_cap">
-          <div> JavaScript Syntax Extension - JSX from React</div>
+          <div> JavaScript</div>
           <div>
             <img
               src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618332/my-content/iconsRF/JS_qcbfpa.png"
@@ -234,11 +223,22 @@ const Home = () => {
           </div>
         </div>
         <div className="listing_cap">
-          <div>Photoshop</div>
+          <div>NodeJS</div>
           <div>
             <img
-              src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618331/my-content/iconsRF/PS_anhaul.png"
-              alt="PS"
+              src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618333/my-content/iconsRF/NODE_xnda20.png"
+              alt="Node"
+              width="40"
+            />
+          </div>
+        </div>
+        <div className="listing_cap">
+          <div>Postman</div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618331/my-content/iconsRF/POSTMAN_csedqm.png"
+              alt="postman"
+              alt="Node"
               width="40"
             />
           </div>
@@ -255,42 +255,6 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </div>
-      <div className="title">
-        <img
-          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1674156658/my-content/iconsRF/SPOTIFY_nexesj.png"
-          alt="spotify"
-          width="20"
-        />{" "}
-        Spotify
-      </div>
-      <div className="div_description">
-        <div className="description">
-          I listen music a lot, so I'm going to share with you some cool musics
-          I like to code with ! This is directly from my Spotify, so it's
-          updated frequently and automatically.
-        </div>
-      </div>
-      <div className="elem_song">
-        {dataSpotify.length > 1 &&
-          dataSpotify.map((elem, i) => {
-            return (
-              <div key={i} className="spotify_elem_user">
-                <div className="id_img">
-                  <img src={elem.track.album.images[1].url} alt="img_music" />
-                </div>
-                <div className="title_singer">
-                  <div className="title_style">{elem.track.name}</div>
-                  <div className="separator_spotify"></div>
-                  <div className="text__date">
-                    <div className="artist_style">
-                      {elem.track.artists[0].name}{" "}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
       </div>
     </>
   );

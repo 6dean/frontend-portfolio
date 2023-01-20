@@ -1,8 +1,36 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
+import getAuth from "../Functions/GetAuth";
+import axios from "axios";
 
 const More = () => {
+  const [dataSpotify, setDataSpotify] = useState({});
+  const [tokenSpotify, setTokenSpotify] = useState("");
+
+  useEffect(() => {
+    if (tokenSpotify) {
+      const fetchDataSpotify = async () => {
+        const responseSpotify = await axios.post(
+          "https://site--backend-portfolio--6qn7tv96v7tt.code.run/spotify",
+          {
+            tokenSpotify: tokenSpotify,
+          }
+        );
+        setDataSpotify(responseSpotify.data.tracks.items);
+      };
+      setTimeout(() => {
+        fetchDataSpotify();
+      }, 800);
+    }
+  }, [tokenSpotify]);
+
+  useEffect(() => {
+    getAuth(setTokenSpotify);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
       <div className="name_page">About Me</div>
@@ -10,7 +38,7 @@ const More = () => {
         <div className="description">
           It's time to show you everything about me !
         </div>
-        <span className="icon">🙃</span>
+        <p className="icon">🙃</p>
       </div>
       <div>
         <div className="title">Links</div>
@@ -151,6 +179,42 @@ const More = () => {
             Check my Setup <FontAwesomeIcon icon={faArrowRight} size="sm" />{" "}
           </Link>
         </div>
+      </div>
+      <div className="title">
+        <img
+          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1674156658/my-content/iconsRF/SPOTIFY_nexesj.png"
+          alt="spotify"
+          width="20"
+        />{" "}
+        Spotify
+      </div>
+      <div className="div_description">
+        <div className="description">
+          I listen music a lot, so I'm going to share with you some cool musics
+          I like to code with ! This is directly from my Spotify, so it's
+          updated frequently and automatically.
+        </div>
+      </div>
+      <div className="elem_song">
+        {dataSpotify.length > 1 &&
+          dataSpotify.map((elem, i) => {
+            return (
+              <div key={i} className="spotify_elem_user">
+                <div className="id_img">
+                  <img src={elem.track.album.images[1].url} alt="img_music" />
+                </div>
+                <div className="title_singer">
+                  <div className="title_style">{elem.track.name}</div>
+                  <div className="separator_spotify"></div>
+                  <div className="text__date">
+                    <div className="artist_style">
+                      {elem.track.artists[0].name}{" "}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
       </div>
     </>
   );

@@ -332,45 +332,40 @@ const Projects = () => {
             <div
               className="sub_project"
               onClick={() => {
-                Count("Sixt", "00007");
+                Count("THE DOGS", "00008");
               }}
             >
               <a
-                href="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.17.37_ak5o35.png"
+                href="https://xoxno.com/collection/THEDOGS-e42b11"
                 target="_blank"
                 rel="noreferrer"
               >
-                Sixt{" "}
+                THE DOGS{" "}
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">{IsLoading && data[6].visit} views</div>
+            <div className="sub-view">{IsLoading && data[7].visit} views</div>
           </div>
           <div className="p_project">
             <div className="p_description">
-              <div>
-                Final project to obtain my certification (visible on demand)
-              </div>
-              <div className="p_features">
-                Features : Set Rent offer, Customer details, Admin details
-                Rentals...
-              </div>
-              <div className="p_stack">Stack : NodeJS, ReactJS, Postman</div>
+              <div>NFTs Projects with friends on Blockchain</div>
+              <div className="p_features">Features : 10.000 NFTs unique</div>
+              <div className="p_stack">Stack : Bash, VSC, Rust</div>
             </div>
             <div
               className="img_project"
               onClick={() => {
-                Count("Sixt", "00007");
+                Count("THEDOGS", "00008");
               }}
             >
               <a
-                href="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.17.37_ak5o35.png"
+                href="https://xoxno.com/collection/THEDOGS-e42b11"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img
-                  src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673543925/my-content/Capture_d_e%CC%81cran_2023-01-12_a%CC%80_18.17.37_ak5o35.png"
-                  alt="sixt"
+                  src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1674206969/my-content/iconsRF/Capture_d_e%CC%81cran_2023-01-20_a%CC%80_10.28.49_j1dgch.png"
+                  alt="THEDOGS"
                   width="120"
                 />
               </a>
