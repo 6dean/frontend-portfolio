@@ -37,17 +37,6 @@ const Home = () => {
               take on new challenges in web development.
             </div>
           </div>
-          <div className="description_job">
-            I am currently looking for a 6 month internship . Check my{" "}
-            <a href="https://tubular-beignet-fd6af9.netlify.app/">
-              <span>Resume</span>
-            </a>{" "}
-            and{" "}
-            <Link to="/more">
-              <span>More</span>
-            </Link>{" "}
-            !
-          </div>
         </div>
         <div className="avatar">
           <img
@@ -55,6 +44,17 @@ const Home = () => {
             alt="Dean"
           />
         </div>
+      </div>
+      <div className="description_job">
+        Currently looking for a 6 month internship . Check my{" "}
+        <a href="https://tubular-beignet-fd6af9.netlify.app/">
+          <span>Resume</span>
+        </a>{" "}
+        and{" "}
+        <Link to="/more">
+          <span>More</span>
+        </Link>{" "}
+        !
       </div>
       <div className="title">Featured Projects</div>
       <div className="listing_projects">
