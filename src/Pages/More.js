@@ -76,7 +76,7 @@ const More = () => {
           <li className="list_li">
             <a
               className="link_more"
-              href="https://www.instagram.com/r0ckdean/"
+              href="https://drive.google.com/file/d/1Onf1XfuMrIz-p90wG6XlHbOQ64D8RSkE/view?usp=share_link"
               target="_blank"
               rel="noreferrer"
             >
@@ -121,8 +121,8 @@ const More = () => {
           I first learned on my own as an autodidact, my first personal website
           was in 2007 with Joomla then I decided to go to a Coding Bootcamp in
           2022. It is an accelerated training to learn code but most of all to
-          understand what state of mind of a developer is: autonomy. I learned
-          at{" "}
+          understand what state of mind of a developer is: autonomy.
+          <br />I learned at{" "}
           <span className="link_more">
             <a
               href="https://www.lereacteur.io/"

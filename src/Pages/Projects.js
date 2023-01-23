@@ -24,8 +24,8 @@ const Projects = () => {
       <div className="name_page">Projects</div>
       <div className="div_description">
         <div className="description">
-          I built several projects with different features for each, I love
-          create Apps.
+          I built several projects with different features for each, I'm always
+          up to create Apps.
         </div>
       </div>
       <div className="listing_p_card">
