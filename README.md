@@ -1,9 +1,18 @@
 # RF Portfolio 
 
-I made my portfolio with ReactJS
+I made my portfolio with ReactJS & NodeJS
 
-It is clearly, totally, inspired from leerob.io website. 🙃
+I talk about myself, my projects and my skills.
 
+# Features
+
+- Statistics
+
+Tracking my projects, comments, views etc
+
+- Commentaries
+
+Visitors can write a comment
 
 # Dependances
 
@@ -13,3 +22,7 @@ It is clearly, totally, inspired from leerob.io website. 🙃
 ## Launch App
 
 `yarn start`
+
+# Origins
+
+This webapp is totally an inspiration of leerob.io . 
