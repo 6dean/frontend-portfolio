@@ -43,7 +43,7 @@ const Stats = () => {
       <div className="div_description">
         <div className="description">
           I love to track numbers sometimes, it gives a good idea how fast i
-          grow up. Some of those number come from GitHub API and my DB from
+          grow up. Some of those numbers come from GitHub API and my DB from
           MongoDB.
         </div>
       </div>
