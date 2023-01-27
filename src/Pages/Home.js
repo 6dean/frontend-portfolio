@@ -218,7 +218,7 @@ const Home = () => {
           </div>
         </div>
         <div className="listing_cap">
-          <div>MongoDB Compass</div>
+          <div>MongoDB</div>
           <div>
             <img
               src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618332/my-content/iconsRF/MONGODB_rm65ke.png"
@@ -238,10 +238,10 @@ const Home = () => {
           </div>
         </div>
         <div className="listing_cap">
-          <div>Postman</div>
+          <div>Expo</div>
           <div>
             <img
-              src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618331/my-content/iconsRF/POSTMAN_csedqm.png"
+              src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618332/my-content/iconsRF/EXPO_a32pti.png"
               alt="postman"
               width="40"
             />
