@@ -348,8 +348,11 @@ const Projects = () => {
           </div>
           <div className="p_project">
             <div className="p_description">
-              <div>NFTs Projects with friends on Blockchain</div>
-              <div className="p_features">Features : 10.000 NFTs unique</div>
+              <div>
+                NFTs Collection - Project on Blockchain available on Xoxno
+                market
+              </div>
+              <div className="p_features">Feature : 10.000 NFTs unique</div>
               <div className="p_stack">Stack : Bash, VSC, Rust</div>
             </div>
             <div
