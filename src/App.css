@@ -23,6 +23,10 @@ span {
   text-decoration: underline;
 }
 
+.stat_style {
+  height: 100vh;
+}
+
 button {
   background-color: none;
   border: none;

@@ -38,7 +38,7 @@ const Stats = () => {
   }
 
   return (
-    <>
+    <div className="stat_style">
       <div className="name_page">Statistics</div>
       <div className="div_description">
         <div className="description">
@@ -73,7 +73,7 @@ const Stats = () => {
           <div className="count">{isLoading ? data__.length : ""}</div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
