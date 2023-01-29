@@ -60,12 +60,32 @@ const Skills = () => {
         </div>
         <div className="card_ab">
           <img
+            src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1674989482/my-content/iconsRF/ViteJS_pvvvie.png"
+            alt="NodeJs"
+            width="40"
+          />
+          <div className="title_ab">Vite</div>
+          <div>
+            <div className="description_ab">Build faster your App.</div>
+          </div>
+        </div>
+        <div className="card_ab">
+          <img
             src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618332/my-content/iconsRF/FOREST_bhvros.png"
             alt="forest"
             width="40"
           />
           <div className="title_ab">Forest admin</div>
           <div className="description_ab">Manage your App easily.</div>
+        </div>
+        <div className="card_ab">
+          <img
+            src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618332/my-content/iconsRF/MONGODB_rm65ke.png"
+            alt="mongoDB"
+            width="40"
+          />
+          <div className="title_ab">MongoDB</div>
+          <div className="description_ab">Manage your DataBase.</div>
         </div>
         <div className="card_ab">
           <img
@@ -84,15 +104,6 @@ const Skills = () => {
           />
           <div className="title_ab">Postman</div>
           <div className="description_ab">Check your APIs.</div>
-        </div>
-        <div className="card_ab">
-          <img
-            src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618332/my-content/iconsRF/MONGODB_rm65ke.png"
-            alt="mongoDB"
-            width="40"
-          />
-          <div className="title_ab">MongoDB Compass</div>
-          <div className="description_ab">Manage your DataBase.</div>
         </div>
         <div className="card_ab">
           <img
@@ -248,6 +259,19 @@ const Skills = () => {
           <div>
             <div className="description_ab">
               Yes, I can do that on my own. 👔
+            </div>
+          </div>
+        </div>
+        <div className="card_ab">
+          <img
+            src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1674989630/my-content/iconsRF/RLrank_taawqz.png"
+            alt="NodeJs"
+            width="40"
+          />
+          <div className="title_ab">Champion 2</div>
+          <div>
+            <div className="description_ab">
+              I can carry you on Rocket League. 🎮
             </div>
           </div>
         </div>
