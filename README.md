@@ -25,4 +25,4 @@ Visitors can write a comment
 
 # Origins
 
-This webapp is totally an inspiration of leerob.io . 
+This webapp is an inspiration of leerob.io (2022 website). 
