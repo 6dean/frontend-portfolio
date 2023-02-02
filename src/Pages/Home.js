@@ -48,7 +48,7 @@ const Home = () => {
       <div className="description_job">
         Currently looking for a 6 month internship. Check my{" "}
         <a
-          href="https://drive.google.com/file/d/1Onf1XfuMrIz-p90wG6XlHbOQ64D8RSkE/view?usp=share_link"
+          href="https://drive.google.com/file/d/1hjS57ZXVat1-jsruIbeegPb74CzS0QSv/view?usp=share_link"
           target="_blank"
           rel="noreferrer"
         >
