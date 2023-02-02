@@ -1,8 +1,14 @@
-# RF Portfolio 
+# RF Portfolio
 
 I made my portfolio with ReactJS & NodeJS
 
 I talk about myself, my projects and my skills.
+
+# APIs
+
+- GitHuvb
+- Spotify
+- MongoDB
 
 # Features
 
@@ -25,4 +31,4 @@ Visitors can write a comment
 
 # Origins
 
-This webapp is totally an inspiration of leerob.io . 
+This webapp is totally an inspiration of leerob.io .
