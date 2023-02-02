@@ -4,12 +4,6 @@ I made my portfolio with ReactJS & NodeJS
 
 I talk about myself, my projects and my skills.
 
-# APIs
-
-- GitHuvb
-- Spotify
-- MongoDB
-
 # Features
 
 - Statistics
