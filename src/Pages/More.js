@@ -201,7 +201,14 @@ const More = () => {
             return (
               <div key={i} className="spotify_elem_user">
                 <div className="id_img">
-                  <img src={elem.track.album.images[1].url} alt="img_music" />
+                  <img
+                    src={
+                      elem.track.album.images[1] !== undefined
+                        ? elem.track.album.images[1].url
+                        : null
+                    }
+                    alt="img_music"
+                  />
                 </div>
                 <div className="title_singer">
                   <div className="title_style">{elem.track.name}</div>
