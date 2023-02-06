@@ -52,11 +52,11 @@ const Home = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <span>Resume</span>
+          <span className="link_more">Resume</span>
         </a>{" "}
         and{" "}
         <Link to="/more">
-          <span>More</span>
+          <span className="link_more">More</span>
         </Link>{" "}
         !
       </div>
