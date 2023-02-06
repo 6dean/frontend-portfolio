@@ -20,7 +20,6 @@ body::-webkit-scrollbar {
 
 span {
   font-weight: bold;
-  text-decoration: underline;
 }
 
 .stat_style {
@@ -467,6 +466,7 @@ header {
 
 .link_more {
   font-weight: 600;
+  text-decoration: underline;
 }
 
 .link_more:hover {

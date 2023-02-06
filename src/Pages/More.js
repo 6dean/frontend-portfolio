@@ -91,7 +91,8 @@ const More = () => {
               rel="noreferrer"
             >
               Email
-            </a>
+            </a>{" "}
+            (ferdjallahrockdean@gmail.com)
           </li>
         </div>
       </div>
@@ -104,6 +105,10 @@ const More = () => {
           i used to play on my SNES and my father's Macintosh. I live now in
           Paris. I love build apps, listen music, play videogames and checking
           my crypto wallet.
+          <br /> If I had to recap myself in three words : <span>
+            keen
+          </span>, <span>interested</span> and <span>full of good humour</span>{" "}
+          .
         </div>
       </div>
       <div className="sub_title">Before Coding</div>
@@ -112,17 +117,18 @@ const More = () => {
           I left school at 18 and got into the professional world through
           several odd jobs. Then I found stability at the RATP, a public
           transport company. At the same time, I was following the tech universe
-          and all its news with the idea to work in it.
+          and all its news with the idea to work in it. In 2022, I decided to
+          start a career change and live my dream.
         </div>
       </div>
       <div className="sub_title">Education</div>
       <div className="div_description">
         <div className="description">
           I first learned on my own as an autodidact, my first personal website
-          was in 2007 with Joomla then I decided to go to a Coding Bootcamp in
-          2022. It is an accelerated training to learn code but most of all to
-          understand what state of mind of a developer is: autonomy.
-          <br />I learned at{" "}
+          was in 2007 with Joomla then I decided to go to a Coding Bootcamp. It
+          is an accelerated training to learn code but most of all to understand
+          what state of mind of a developer is: autonomy.
+          <br />I learned few technologies like ReactJS, NodeJS and more at{" "}
           <span className="link_more">
             <a
               href="https://www.lereacteur.io/"
