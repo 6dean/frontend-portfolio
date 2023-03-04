@@ -45,7 +45,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="description_job">
+      {/* <div className="description_job">
         Currently looking for a 6 month internship. Check my{" "}
         <a
           href="https://drive.google.com/file/d/1sL1ZUVweVzWuMV5DSNQSyl7NOZ1J0jog/view?usp=share_link"
@@ -59,7 +59,7 @@ const Home = () => {
           <span className="link_more">More</span>
         </Link>{" "}
         !
-      </div>
+      </div> */}
       <div className="title">Featured Projects</div>
       <div className="listing_projects">
         <div className="card_fp">
