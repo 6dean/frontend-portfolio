@@ -76,7 +76,7 @@ const More = () => {
           <li className="list_li">
             <a
               className="link_more"
-              href="https://drive.google.com/file/d/1sL1ZUVweVzWuMV5DSNQSyl7NOZ1J0jog/view?usp=share_link"
+              href="https://drive.google.com/file/d/1XYJ4NaoefUdL3SyK_jYgruu36IcZg42t/view?usp=share_link"
               target="_blank"
               rel="noreferrer"
             >
