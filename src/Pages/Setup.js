@@ -1,10 +1,17 @@
-const Setup = ({ darkMode }) => {
+const Setup = ({ darkMode, frenchMode }) => {
   return (
     <>
-      <div className="name_page">Setup</div>
+      <div className="name_page">{frenchMode ? <>Config</> : <>Setup</>}</div>
       <div className="div_description">
         <div className="description">
-          I am a geek after all, why not talk about my setup ?
+          {frenchMode ? (
+            <>
+              Je suis un geek après tout, alors pourquoi pas partager ma config
+              ?
+            </>
+          ) : (
+            <>I am a geek after all, why not talk about my setup ?</>
+          )}
         </div>
       </div>
       <div className="container_setup">
@@ -22,7 +29,11 @@ const Setup = ({ darkMode }) => {
       </div>
       <div>
         <p className="detail_img">
-          Photos from my personal setup (Light : Work / Dark : Geek)
+          {frenchMode ? (
+            <>Photos de ma config perso (Light : Boulot / Dark : Geek)</>
+          ) : (
+            <>Photos from my personal setup (Light : Work / Dark : Geek)</>
+          )}
         </p>
       </div>
       <div className="set_title">Desktop / Office</div>

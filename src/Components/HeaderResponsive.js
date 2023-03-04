@@ -9,6 +9,8 @@ const HeaderResponsive = ({
   setDarkMode,
   displayMenu,
   setDisplayMenu,
+  setFrenchMode,
+  frenchMode,
 }) => {
   const navigate = useNavigate();
 
@@ -37,17 +39,30 @@ const HeaderResponsive = ({
             <FontAwesomeIcon icon={faXmark} size="2x" />
           </div>
         )}
-        <div
-          className={darkMode ? "h_mode_light" : "h_mode"}
-          onClick={() => {
-            darkMode ? setDarkMode(false) : setDarkMode(true);
-          }}
-        >
-          {darkMode ? (
-            <FontAwesomeIcon icon={faSun} size="lg" />
-          ) : (
-            <FontAwesomeIcon icon={faMoon} size="lg" />
-          )}
+        <div className="right-elem">
+          <div
+            onClick={() => {
+              frenchMode ? setFrenchMode(false) : setFrenchMode(true);
+            }}
+          >
+            {frenchMode ? (
+              <div className="lang">FR</div>
+            ) : (
+              <div className="lang">EN</div>
+            )}
+          </div>
+          <div
+            className={darkMode ? "h_mode_light" : "h_mode"}
+            onClick={() => {
+              darkMode ? setDarkMode(false) : setDarkMode(true);
+            }}
+          >
+            {darkMode ? (
+              <FontAwesomeIcon icon={faSun} size="lg" />
+            ) : (
+              <FontAwesomeIcon icon={faMoon} size="lg" />
+            )}
+          </div>
         </div>
       </header>
     </div>

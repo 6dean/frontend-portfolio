@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import getAuth from "../Functions/GetAuth";
 import axios from "axios";
 
-const More = () => {
+const More = ({ frenchMode }) => {
   const [dataSpotify, setDataSpotify] = useState({});
   const [tokenSpotify, setTokenSpotify] = useState("");
 
@@ -33,15 +33,21 @@ const More = () => {
 
   return (
     <>
-      <div className="name_page">About Me</div>
+      <div className="name_page">
+        {frenchMode ? <>À propos de moi</> : <>About Me</>}
+      </div>
       <div className="div_description">
         <div className="description">
-          It's time to show you everything about me !
+          {frenchMode ? (
+            <>C'est le moment de me dévoiler ! </>
+          ) : (
+            <>It's time to show you everything about me !</>
+          )}
         </div>
         <p className="icon">🙃</p>
       </div>
       <div>
-        <div className="title">Links</div>
+        <div className="title">{frenchMode ? <>Liens</> : <>Links</>}</div>
         <div className="listing_contact">
           <li className="list_li">
             <a
@@ -80,7 +86,7 @@ const More = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Resume
+              {frenchMode ? <>CV</> : <>Resume</>}
             </a>
           </li>
           <li className="list_li">
@@ -100,65 +106,142 @@ const More = () => {
       <div className="sub_title">Introduction</div>
       <div className="div_description">
         <div className="description">
-          My name is Rockdean Ferdjallah, but all my friends call me « Dean » I
-          was born october 5th 1989 in Bondy, France. I am a geek since I was 4,
-          i used to play on my SNES and my father's Macintosh. I live now in
-          Paris. I love build apps, listen music, play videogames and checking
-          my crypto wallet.
-          <br /> If I had to recap myself in three words : <span>
-            keen
-          </span>, <span>interested</span> and <span>full of good humour</span>{" "}
-          .
+          {frenchMode ? (
+            <>
+              Je m'appelle Rockdean Ferdjallah, mais tous mes amis m'appellent «
+              Dean » je suis né le 5 octobre 1989 à Bondy, France. Je suis un
+              geek depuis l'âge de 4 ans, je jouais sur ma SNES et le Macintosh
+              de mon père. je vis maintenant à Paris. J'aime créer des
+              applications, écouter de la musique, jouer à des jeux vidéo et
+              vérifier mon portefeuille crypto.
+              <br />
+              Si je devais me résumer en trois mots : <span>
+                impliqué
+              </span>, <span>curieux</span> avec{" "}
+              <span>un sens de l'humour</span> .
+            </>
+          ) : (
+            <>
+              My name is Rockdean Ferdjallah, but all my friends call me « Dean
+              » I was born october 5th 1989 in Bondy, France. I am a geek since
+              I was 4, i used to play on my SNES and my father's Macintosh. I
+              live now in Paris. I love build apps, listen music, play
+              videogames and checking my crypto wallet.
+              <br /> If I had to recap myself in three words : <span>keen</span>
+              , <span>interested</span> and <span>full of good humour</span> .
+            </>
+          )}
         </div>
       </div>
-      <div className="sub_title">Before Coding</div>
+      <div className="sub_title">
+        {frenchMode ? <>Avant de Coder</> : <>Before Coding</>}
+      </div>
       <div className="div_description">
         <div className="description">
-          I left school at 18 and got into the professional world through
-          several odd jobs. Then I found stability at the RATP, a public
-          transport company. At the same time, I was following the tech universe
-          and all its news with the idea to work in it. In 2022, I decided to
-          start a career change and live my dream.
+          {frenchMode ? (
+            <>
+              J'ai quitté les bancs de l'école à 18 ans et je suis entré dans le
+              monde professionnel à travers plusieurs petits boulots. Puis j'ai
+              trouvé de la stabilité à la RATP, un établissement public de
+              transport. En parallèle, je suivais l'univers tech et toute son
+              actualité avec le désir d'y travailler. En 2022, j'ai décidé de
+              commencer un changement de carrière et vivre mon rêve.
+            </>
+          ) : (
+            <>
+              I left school at 18 and got into the professional world through
+              several odd jobs. Then I found stability at the RATP, a public
+              transport company. At the same time, I was following the tech
+              universe and all its news with the idea to work in it. In 2022, I
+              decided to start a career change and live my dream.
+            </>
+          )}
         </div>
       </div>
-      <div className="sub_title">Education</div>
+      <div className="sub_title">
+        {frenchMode ? <>Éducation</> : <>Education</>}
+      </div>
       <div className="div_description">
         <div className="description">
-          I first learned on my own as an autodidact, my first personal website
-          was in 2007 with Joomla then I decided to go to a Coding Bootcamp. It
-          is an accelerated training to learn code but most of all to understand
-          what state of mind of a developer is: autonomy.
-          <br />I learned few technologies like ReactJS, NodeJS and more at{" "}
-          <span className="link_more">
-            <a
-              href="https://www.lereacteur.io/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Le Reacteur
-            </a>
-          </span>{" "}
-          in Paris with{" "}
-          <span className="link_more">
-            <a
-              href="https://github.com/XavierColombel"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Xavier Colombel
-            </a>
-          </span>{" "}
-          and{" "}
-          <span className="link_more">
-            <a
-              href="https://github.com/FaridSafi"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Farid Safi
-            </a>
-          </span>
-          .
+          {frenchMode ? (
+            <>
+              J'ai d'abord appris en autodidacte, mon premier site web personnel
+              était en 2007 avec Joomla, puis j'ai décidé de rejoindre à un
+              Coding Bootcamp. Il s'agit d'une formation accélérée pour
+              apprendre le code mais surtout pour comprendre quel est l'état
+              d'esprit d'un développeur : l'autonomie.
+              <br />
+              J'ai appris quelques techno comme ReactJS, NodeJS et bien d'autres
+              à{" "}
+              <span className="link_more">
+                <a
+                  href="https://www.lereacteur.io/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Le Reacteur
+                </a>
+              </span>{" "}
+              à Paris avec{" "}
+              <span className="link_more">
+                <a
+                  href="https://github.com/XavierColombel"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Xavier Colombel
+                </a>
+              </span>{" "}
+              et{" "}
+              <span className="link_more">
+                <a
+                  href="https://github.com/FaridSafi"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Farid Safi
+                </a>
+              </span>
+            </>
+          ) : (
+            <>
+              I first learned on my own as an autodidact, my first personal
+              website was in 2007 with Joomla then I decided to go to a Coding
+              Bootcamp. It is an accelerated training to learn code but most of
+              all to understand what state of mind of a developer is: autonomy.
+              <br />I learned few technologies like ReactJS, NodeJS and more at{" "}
+              <span className="link_more">
+                <a
+                  href="https://www.lereacteur.io/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Le Reacteur
+                </a>
+              </span>{" "}
+              in Paris with{" "}
+              <span className="link_more">
+                <a
+                  href="https://github.com/XavierColombel"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Xavier Colombel
+                </a>
+              </span>{" "}
+              and{" "}
+              <span className="link_more">
+                <a
+                  href="https://github.com/FaridSafi"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Farid Safi
+                </a>
+              </span>
+              .
+            </>
+          )}
         </div>
       </div>
       <div className="title">Photos</div>
@@ -182,7 +265,8 @@ const More = () => {
               window.scrollTo(0, 0);
             }}
           >
-            Check my Setup <FontAwesomeIcon icon={faArrowRight} size="sm" />{" "}
+            {frenchMode ? <>Voir ma config </> : <>Check my Setup </>}
+            <FontAwesomeIcon icon={faArrowRight} size="sm" />{" "}
           </Link>
         </div>
       </div>
@@ -196,9 +280,19 @@ const More = () => {
       </div>
       <div className="div_description">
         <div className="description">
-          I listen music a lot, so I'm going to share with you some cool musics
-          I like to code with ! This is directly from my Spotify, so it's
-          updated frequently and automatically.
+          {frenchMode ? (
+            <>
+              J'écoute beaucoup de musique, alors je vais partager avec vous
+              quelques musiques avec lesquelles j'aime coder ! C'est issu de mon
+              compte Spotify, mis à jour fréquemment et automatiquement.{" "}
+            </>
+          ) : (
+            <>
+              I listen music a lot, so I'm going to share with you some cool
+              musics I like to code with ! This is directly from my Spotify, so
+              it's updated frequently and automatically.
+            </>
+          )}
         </div>
       </div>
       <div className="elem_song">

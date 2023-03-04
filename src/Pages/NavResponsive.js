@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const NavigationResp = ({ setDisplayMenu }) => {
+const NavigationResp = ({ setDisplayMenu, frenchMode }) => {
   return (
     <div className="navResp">
       <div className="resp_list">
@@ -10,7 +10,7 @@ const NavigationResp = ({ setDisplayMenu }) => {
             setDisplayMenu(false);
           }}
         >
-          <div className="h_elem">Home</div>
+          <div className="h_elem">{frenchMode ? <>Accueil</> : <>Home</>}</div>
         </Link>
         <Link
           to="/projects"
@@ -18,7 +18,9 @@ const NavigationResp = ({ setDisplayMenu }) => {
             setDisplayMenu(false);
           }}
         >
-          <div className="h_elem">Projects</div>
+          <div className="h_elem">
+            {frenchMode ? <>Projets</> : <>Projects</>}
+          </div>
         </Link>
         <Link
           to="/skills"
@@ -26,7 +28,9 @@ const NavigationResp = ({ setDisplayMenu }) => {
             setDisplayMenu(false);
           }}
         >
-          <div className="h_elem">Skills</div>
+          <div className="h_elem">
+            {frenchMode ? <>Capacités</> : <>Skills</>}
+          </div>
         </Link>
         <Link
           to="/guestbook"
@@ -34,7 +38,9 @@ const NavigationResp = ({ setDisplayMenu }) => {
             setDisplayMenu(false);
           }}
         >
-          <div className="h_elem">Guestbook</div>
+          <div className="h_elem">
+            {frenchMode ? <>Livre d'or</> : <>Guestbook</>}
+          </div>
         </Link>
         <Link
           to="/stats"
@@ -42,7 +48,9 @@ const NavigationResp = ({ setDisplayMenu }) => {
             setDisplayMenu(false);
           }}
         >
-          <div className="h_elem">Statistics</div>
+          <div className="h_elem">
+            {frenchMode ? <>Statistiques</> : <>Statistics</>}
+          </div>
         </Link>
         <Link
           to="/more"
@@ -50,7 +58,7 @@ const NavigationResp = ({ setDisplayMenu }) => {
             setDisplayMenu(false);
           }}
         >
-          <div className="h_elem">More</div>
+          <div className="h_elem">{frenchMode ? <>Plus</> : <>More</>}</div>
         </Link>
         <a
           href="https://github.com/6dean/frontend-portfolio"
