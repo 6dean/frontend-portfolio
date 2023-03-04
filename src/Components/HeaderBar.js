@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 import { useState, useEffect } from "react";
 
-const HeaderBar = ({ darkMode, setDarkMode }) => {
+const HeaderBar = ({ darkMode, setDarkMode, setFrenchMode, frenchMode }) => {
   const [pageArea, SetPageArea] = useState();
   const location = useLocation();
 
@@ -29,43 +29,56 @@ const HeaderBar = ({ darkMode, setDarkMode }) => {
         <div className="h_list">
           <Link to="/">
             <div className={pageArea === "/" ? "h_elem_loc" : "h_elem"}>
-              Home
+              {frenchMode ? <>Accueil</> : <>Home</>}
             </div>
           </Link>
           <Link to="/projects">
             <div className={pageArea === "/projects" ? "h_elem_loc" : "h_elem"}>
-              Projects
+              {frenchMode ? <>Projets</> : <>Projects</>}
             </div>
           </Link>
           <Link to="/skills">
             <div className={pageArea === "/skills" ? "h_elem_loc" : "h_elem"}>
-              Skills
+              {frenchMode ? <>Capacités</> : <>Skills</>}
             </div>
           </Link>
           <Link to="/guestbook">
             <div
               className={pageArea === "/guestbook" ? "h_elem_loc" : "h_elem"}
             >
-              Guestbook
+              {frenchMode ? <>Livre d'or</> : <>Guestbook</>}
             </div>
           </Link>
           <Link to="/more">
             <div className={pageArea === "/more" ? "h_elem_loc" : "h_elem"}>
-              More
+              {frenchMode ? <>Plus</> : <>More</>}
             </div>
           </Link>
         </div>
-        <div
-          className={darkMode ? "h_mode_light" : "h_mode"}
-          onClick={() => {
-            darkMode ? setDarkMode(false) : setDarkMode(true);
-          }}
-        >
-          {darkMode ? (
-            <FontAwesomeIcon icon={faSun} size="lg" />
-          ) : (
-            <FontAwesomeIcon icon={faMoon} size="lg" />
-          )}
+        <div className="right-elem">
+          <div
+            onClick={() => {
+              frenchMode ? setFrenchMode(false) : setFrenchMode(true);
+            }}
+          >
+            {frenchMode ? (
+              <div className="lang">FR</div>
+            ) : (
+              <div className="lang">EN</div>
+            )}
+          </div>
+          <div
+            className={darkMode ? "h_mode_light" : "h_mode"}
+            onClick={() => {
+              darkMode ? setDarkMode(false) : setDarkMode(true);
+            }}
+          >
+            {darkMode ? (
+              <FontAwesomeIcon icon={faSun} size="lg" />
+            ) : (
+              <FontAwesomeIcon icon={faMoon} size="lg" />
+            )}
+          </div>
         </div>
       </header>
     </div>

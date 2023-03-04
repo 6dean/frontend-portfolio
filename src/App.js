@@ -25,36 +25,64 @@ import { useState } from "react";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [frenchMode, setFrenchMode] = useState(false);
   const [displayMenu, setDisplayMenu] = useState(false);
 
   return (
     <div className={darkMode ? "rf" : null}>
       <div className="body">
         <Router>
-          <HeaderBar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <HeaderBar
+            darkMode={darkMode}
+            setDarkMode={setDarkMode}
+            setFrenchMode={setFrenchMode}
+            frenchMode={frenchMode}
+          />
           <HeaderResponsive
             darkMode={darkMode}
             setDarkMode={setDarkMode}
             displayMenu={displayMenu}
             setDisplayMenu={setDisplayMenu}
+            setFrenchMode={setFrenchMode}
+            frenchMode={frenchMode}
           />
           <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/projects" element={<Projects />}></Route>
-            <Route path="/skills" element={<Skills />}></Route>
-            <Route path="/guestbook" element={<Guestbook />}></Route>
-            <Route path="/stats" element={<Stats />}></Route>
-            <Route path="/more" element={<More />}></Route>
+            <Route path="/" element={<Home frenchMode={frenchMode} />}></Route>
+            <Route
+              path="/projects"
+              element={<Projects frenchMode={frenchMode} />}
+            ></Route>
+            <Route
+              path="/skills"
+              element={<Skills frenchMode={frenchMode} />}
+            ></Route>
+            <Route
+              path="/guestbook"
+              element={<Guestbook frenchMode={frenchMode} />}
+            ></Route>
+            <Route
+              path="/stats"
+              element={<Stats frenchMode={frenchMode} />}
+            ></Route>
+            <Route
+              path="/more"
+              element={<More frenchMode={frenchMode} />}
+            ></Route>
             <Route
               path="/setup"
-              element={<Setup darkMode={darkMode} />}
+              element={<Setup darkMode={darkMode} frenchMode={frenchMode} />}
             ></Route>
             <Route
               path="/navigation"
-              element={<NavigationResp setDisplayMenu={setDisplayMenu} />}
+              element={
+                <NavigationResp
+                  setDisplayMenu={setDisplayMenu}
+                  frenchMode={frenchMode}
+                />
+              }
             ></Route>
           </Routes>
-          <Footer />
+          <Footer frenchMode={frenchMode} />
         </Router>
       </div>
     </div>

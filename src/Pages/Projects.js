@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Count from "../Functions/Count";
 
-const Projects = () => {
+const Projects = ({ frenchMode }) => {
   const [data, setData] = useState({});
   const [IsLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -21,12 +21,26 @@ const Projects = () => {
 
   return (
     <>
-      <div className="name_page">Projects</div>
+      <div className="name_page">
+        {frenchMode ? <>Projets</> : <>Projects</>}
+      </div>
       <div className="div_description">
         <div className="description">
-          I built several projects with different features for each, I'm always
-          up to create Apps.
+          {frenchMode ? (
+            <>
+              J'ai plusieurs projets avec différentes fonctionnalités, toujours
+              partant pour créer de nouvelles apps.
+            </>
+          ) : (
+            <>
+              I built several projects with different features for each, I'm
+              always up to create Apps.
+            </>
+          )}
         </div>
+      </div>
+      <div className="title-bis">
+        {frenchMode ? <>Projets Étudiant</> : <>Student Projects</>}
       </div>
       <div className="listing_p_card">
         <div className="p_card">
@@ -46,14 +60,29 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">{IsLoading && data[0].visit} views</div>
+            <div className="sub-view">
+              {IsLoading && data[0].visit} {frenchMode ? <>vues</> : <>views</>}
+            </div>
           </div>
           <div className="p_project">
             <div className="p_description">
-              <div>Videogames API holding more than 830.000 references</div>
+              {frenchMode ? (
+                <>API de jeux vidéos contenant plus de 830.000 références</>
+              ) : (
+                <>Videogames API holding more than 830.000 references</>
+              )}{" "}
               <div className="p_features">
-                Features : Responsive, Search, InfiniteScroll, Members
-                features...
+                {frenchMode ? (
+                  <>
+                    Fonctionnalités : Design réactif, Recherche, Défilement
+                    infini...
+                  </>
+                ) : (
+                  <>
+                    Features : Responsive, Search, InfiniteScroll, Members
+                    features...
+                  </>
+                )}
               </div>
               <div className="p_stack">
                 Stack : NodeJS, ReactJS, MongoDB, GitHub, Netlify, NorthFlank
@@ -96,16 +125,34 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">{IsLoading && data[1].visit} views</div>
+            <div className="sub-view">
+              {IsLoading && data[1].visit} {frenchMode ? <>vues</> : <>views</>}
+            </div>
           </div>
           <div className="p_project">
             <div className="p_description">
               <div>
-                Marketplace for buying, selling & exchanging new or secondhand
-                items
+                {frenchMode ? (
+                  <>
+                    Marketplace en ligne pour acheter, vendre et échanger
+                    articles
+                  </>
+                ) : (
+                  <>
+                    Marketplace for buying, selling & exchanging new or
+                    secondhand items
+                  </>
+                )}
               </div>
               <div className="p_features">
-                Features : Browsing, Offer creation, Buy, Login...
+                {frenchMode ? (
+                  <>
+                    Fonctionnalités : Parcourir, Créer une offre,
+                    Acheter-Vendre, inscription...
+                  </>
+                ) : (
+                  <>Features : Browsing, Offer creation, Buy, Login...</>
+                )}
               </div>
               <div className="p_stack">
                 Stack : NodeJS, ReactJS, MongoDB, Stripe, Forest Admin
@@ -148,16 +195,32 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">{IsLoading && data[2].visit} views</div>
+            <div className="sub-view">
+              {IsLoading && data[2].visit} {frenchMode ? <>vues</> : <>views</>}
+            </div>
           </div>
           <div className="p_project">
             <div className="p_description">
               <div>
-                Marketplace for buying, selling & exchanging new or secondhand
-                items
+                {frenchMode ? (
+                  <>Réplique d'une page Deliveroo - Subway Paris</>
+                ) : (
+                  <>Webpage replica from Deliveroo - Subway Paris</>
+                )}
               </div>
               <div className="p_features">
-                Features : Add items, remove items from basket, price update...
+                {frenchMode ? (
+                  <>
+                    Fonctionnalités : Panier, mise à jour prix et nombre
+                    d'articles...
+                  </>
+                ) : (
+                  <>
+                    {" "}
+                    Features : Add items, remove items from basket, price
+                    update...
+                  </>
+                )}
               </div>
               <div className="p_stack">Stack : NodeJS, ReactJS, Render</div>
             </div>
@@ -198,14 +261,26 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">{IsLoading && data[3].visit} views</div>
+            <div className="sub-view">
+              {IsLoading && data[3].visit} {frenchMode ? <>vues</> : <>views</>}
+            </div>
           </div>
           <div className="p_project">
             <div className="p_description">
               <div>
-                Coding test interview on Marvel theme from a Tech Company
+                {frenchMode ? (
+                  <>Test technique sur le thème Marvel</>
+                ) : (
+                  <>Coding test interview on Marvel theme from a Tech Company</>
+                )}
               </div>
-              <div className="p_features">Features : Searching, Favorites</div>
+              <div className="p_features">
+                {frenchMode ? (
+                  <>Fonctionnalités : Recherche, parcourir et favoris</>
+                ) : (
+                  <>Features : Searching, Favorites</>
+                )}
+              </div>
               <div className="p_stack">
                 Stack : NodeJS, ReactJS, Netlify, NorthFlank
               </div>
@@ -247,12 +322,26 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">{IsLoading && data[4].visit} views</div>
+            <div className="sub-view">
+              {IsLoading && data[4].visit} {frenchMode ? <>vues</> : <>views</>}
+            </div>
           </div>
           <div className="p_project">
             <div className="p_description">
-              <div>Front-End replica of Kochi, Japan 🇯🇵</div>
-              <div className="p_features">Features : Responsive, Carousel</div>
+              <div>
+                {frenchMode ? (
+                  <>Front-End de la page de Kochi, Japon 🇯🇵</>
+                ) : (
+                  <>Front-End replica of Kochi, Japan 🇯🇵</>
+                )}
+              </div>
+              <div className="p_features">
+                {frenchMode ? (
+                  <>Fonctionnalités : Design réactif, carrousel d'images</>
+                ) : (
+                  <>Features : Responsive, Carousel</>
+                )}
+              </div>
               <div className="p_stack">Stack : HTML, CSS, Netlify</div>
             </div>
             <div
@@ -292,16 +381,35 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">{IsLoading && data[5].visit} views</div>
+            <div className="sub-view">
+              {IsLoading && data[5].visit} {frenchMode ? <>vues</> : <>views</>}
+            </div>
           </div>
           <div className="p_project">
             <div className="p_description">
               <div>
-                Light App replica of the famous online service for lodging
+                {frenchMode ? (
+                  <>
+                    Version allégée du fameux service de location d'hébergements
+                  </>
+                ) : (
+                  <>
+                    Light App replica of the famous online service for lodging
+                  </>
+                )}
               </div>
               <div className="p_features">
-                Features : Sign in, Sign up, Browsing, Editing profile,
-                Geolocation...
+                {frenchMode ? (
+                  <>
+                    Fonctionnalités : S'inscrire, parcourir, editer,
+                    géolocalisation...
+                  </>
+                ) : (
+                  <>
+                    Features : Sign in, Sign up, Browsing, Editing profile,
+                    Geolocation...
+                  </>
+                )}
               </div>
               <div className="p_stack">
                 Stack : React Native, Expo, Xcode, Android Studio
@@ -327,6 +435,9 @@ const Projects = () => {
             </div>
           </div>
         </div>
+        <div className="title-bis">
+          {frenchMode ? <>Divers</> : <>Others</>}
+        </div>
         <div className="p_card">
           <div className="p_project">
             <div
@@ -344,15 +455,29 @@ const Projects = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
               </a>
             </div>
-            <div className="sub-view">{IsLoading && data[7].visit} views</div>
+            <div className="sub-view">
+              {IsLoading && data[7].visit} {frenchMode ? <>vues</> : <>views</>}
+            </div>
           </div>
           <div className="p_project">
             <div className="p_description">
               <div>
-                NFTs Collection - Project on Blockchain available on Xoxno
-                market
+                {frenchMode ? (
+                  <>Collection NFTs - Projet blockchain disponible sur Xoxno</>
+                ) : (
+                  <>
+                    NFTs Collection - Project on Blockchain available on Xoxno
+                    market
+                  </>
+                )}
               </div>
-              <div className="p_features">Feature : 10.000 NFTs unique</div>
+              <div className="p_features">
+                {frenchMode ? (
+                  <>Fonctionnalité : 10.000 NFTs unique</>
+                ) : (
+                  <>Feature : 10.000 NFTs unique</>
+                )}
+              </div>
               <div className="p_stack">Stack : Bash, VSC, Rust</div>
             </div>
             <div

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ frenchMode }) => {
   return (
     <footer>
       <div>
@@ -10,7 +10,10 @@ const Footer = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <div className="f_description">Home</div>
+          <div className="f_description">
+            {" "}
+            {frenchMode ? <>Accueil</> : <>Home</>}
+          </div>
         </Link>
         <Link
           to="/projects"
@@ -18,7 +21,9 @@ const Footer = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <div className="f_description">Projects</div>
+          <div className="f_description">
+            {frenchMode ? <>Projets</> : <>Projects</>}
+          </div>
         </Link>
         <Link
           to="/stats"
@@ -26,7 +31,9 @@ const Footer = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <div className="f_description">Statistics</div>
+          <div className="f_description">
+            {frenchMode ? <>Statistiques</> : <>Statistics</>}
+          </div>
         </Link>
       </div>
       <div>
@@ -46,7 +53,10 @@ const Footer = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <div className="f_description">More</div>
+          <div className="f_description">
+            {" "}
+            {frenchMode ? <>Plus</> : <>More</>}
+          </div>
         </Link>
       </div>
       <div>
@@ -63,7 +73,10 @@ const Footer = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <div className="f_description">Setup</div>
+          <div className="f_description">
+            {" "}
+            {frenchMode ? <>Config</> : <>Setup</>}
+          </div>
         </Link>
       </div>
     </footer>

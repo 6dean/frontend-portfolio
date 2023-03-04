@@ -6,7 +6,7 @@ import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { useState, useEffect } from "react";
 import Count from "../Functions/Count";
 
-const Home = () => {
+const Home = ({ frenchMode }) => {
   const [data, setData] = useState({});
   const [IsLoading, setIsLoading] = useState(false);
 
@@ -29,12 +29,29 @@ const Home = () => {
       <div className="card_id">
         <div className="text_id">
           <div className="name">Rockdean Ferdjallah</div>
-          <div className="job">FullStack JavaScript Developer</div>
+          <div className="job">
+            {frenchMode ? (
+              <>Développeur JavaScript FullStack</>
+            ) : (
+              <>FullStack JavaScript Developer</>
+            )}
+          </div>
           <div className="div_description">
             <div className="description">
-              I am a web developer passionate about coding, the geek universe
-              and videogames. I am constantly evolving to improve my skills and
-              take on new challenges in web development.
+              {frenchMode ? (
+                <>
+                  Je suis un développeur web passionné de technologies,
+                  d'univers geek et des jeux vidéos. J'adore apprendre et
+                  progresser afin de réussir tous les prochains challenges qui
+                  se présenteront à moi.
+                </>
+              ) : (
+                <>
+                  I am a web developer passionate about coding, the geek
+                  universe and videogames. I am constantly evolving to improve
+                  my skills and take on new challenges in web development.
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -60,7 +77,9 @@ const Home = () => {
         </Link>{" "}
         !
       </div> */}
-      <div className="title">Featured Projects</div>
+      <div className="title">
+        {frenchMode ? <>Mes Projets</> : <>Featured Projects</>}
+      </div>
       <div className="listing_projects">
         <div className="card_fp">
           <div>
@@ -75,7 +94,17 @@ const Home = () => {
               <div className="card_title">RAWG.io</div>
             </a>
             <div className="card_description">
-              Videogames platform with API holding more than 830.000 references
+              {frenchMode ? (
+                <>
+                  Plateforme de JV avec une API contenant plus de 830.000
+                  références
+                </>
+              ) : (
+                <>
+                  Videogames platform with API holding more than 830.000
+                  references
+                </>
+              )}
             </div>
           </div>
           <div className="img_card">
@@ -112,9 +141,16 @@ const Home = () => {
               <div className="card_title">Vinted</div>
             </a>
             <div className="card_description">
-              {" "}
-              Online marketplace solution for buying, selling and exchanging
-              items
+              {frenchMode ? (
+                <>
+                  Marketplace en ligne pour acheter, vendre et échanger articles
+                </>
+              ) : (
+                <>
+                  Online marketplace solution for buying, selling and exchanging
+                  items
+                </>
+              )}
             </div>
           </div>
           <div className="img_card">
@@ -151,7 +187,17 @@ const Home = () => {
               <div className="card_title">Deliveroo</div>
             </a>
             <div className="card_description">
-              Are you hungry ? Get a sandwich from Subway 🥖 delivery at work
+              {frenchMode ? (
+                <>
+                  Une petite faim ? Prenez un sandwich de Subway 🥖 livraison au
+                  travail
+                </>
+              ) : (
+                <>
+                  Are you hungry ? Get a sandwich from Subway 🥖 delivery at
+                  work
+                </>
+              )}
             </div>
           </div>
           <div className="img_card">
@@ -184,16 +230,29 @@ const Home = () => {
               window.scrollTo(0, 0);
             }}
           >
-            Check all projects <FontAwesomeIcon icon={faArrowRight} size="sm" />
+            {frenchMode ? <>Voir tous mes projets </> : <>Check all projects</>}
+            <FontAwesomeIcon icon={faArrowRight} size="sm" />
           </Link>
         </div>
       </div>
-      <div className="title">Abilities</div>
+      <div className="title">
+        {frenchMode ? <>Mes Capacités</> : <>My Abilities</>}
+      </div>
       <div className="div_description">
         <div className="description">
-          I have few skills, I can code HTML, CSS, JS and JSX. I know how to use
-          some softwares like Visual Studio Code, MongoDB Compass, Postman,
-          Avidemux, Photoshop and more !
+          {frenchMode ? (
+            <>
+              Voici quelques compétences, je peux coder en HTML, CSS, JS et JSX.
+              je sais utiliser certains logiciels comme Visual Studio Code,
+              MongoDB, Postman, Avidemux, Photoshop et plus encore !
+            </>
+          ) : (
+            <>
+              There's some skills, I can code HTML, CSS, JS and JSX. I know how
+              to use some softwares like Visual Studio Code, MongoDB Compass,
+              Postman, Avidemux, Photoshop and more !
+            </>
+          )}
         </div>
       </div>
       <div className="a_list">
@@ -255,7 +314,8 @@ const Home = () => {
                 window.scrollTo(0, 0);
               }}
             >
-              Get all details <FontAwesomeIcon icon={faArrowRight} size="sm" />{" "}
+              {frenchMode ? <>Voir tout </> : <>Get all details </>}
+              <FontAwesomeIcon icon={faArrowRight} size="sm" />{" "}
             </Link>
           </div>
         </div>
