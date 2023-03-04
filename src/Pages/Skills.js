@@ -1,11 +1,22 @@
-const Skills = () => {
+const Skills = ({ frenchMode }) => {
   return (
     <>
-      <div className="name_page">Skills</div>
+      <div className="name_page">
+        {frenchMode ? <>Capacités</> : <>Skills</>}
+      </div>
       <div className="div_description">
         <div className="description">
-          I have used, at least once, each of them for my projects. I hope to
-          use new ones in the next future !
+          {frenchMode ? (
+            <>
+              J'ai utilisé, au moins une fois, chacun de ces outils pour mes
+              projets. J'espère en utiliser de nouveaux dans le futur !
+            </>
+          ) : (
+            <>
+              I have used, at least once, each of them for my projects. I hope
+              to use new ones in the next future !
+            </>
+          )}
         </div>
       </div>
       <div className="listing_ab">

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Commentary from "../Functions/Commentary";
 
-const Guestbook = () => {
+const Guestbook = ({ frenchMode }) => {
   const [data, setData] = useState([]);
   const [writing, setWriting] = useState(false);
   const [username, setUsername] = useState("");
@@ -28,12 +28,24 @@ const Guestbook = () => {
 
   return (
     <>
-      <div className="name_page">Guestbook</div>
+      <div className="name_page">
+        {frenchMode ? <>Livre d'or</> : <>Guestbook</>}
+      </div>
       <div className="div_description">
         <div className="description">
-          This portfolio is a full stack project, there is a DB accepting
-          comments, so why not write a little text to support me or ask a
-          question ?
+          {frenchMode ? (
+            <>
+              Ce portfolio est un projet full stack, il y a une BDD acceptant
+              les commentaires, alors pourquoi ne pas écrire un petit texte pour
+              me soutenir ou poser une question ?
+            </>
+          ) : (
+            <>
+              This portfolio is a full stack project, there is a DB accepting
+              comments, so why not write a little text to support me or ask a
+              question ?
+            </>
+          )}
         </div>
       </div>
 
@@ -42,7 +54,13 @@ const Guestbook = () => {
           <div>
             <div className="title_comment">
               <div>
-                <p className="style_warn">Write a comment</p>
+                <p className="style_warn">
+                  {frenchMode ? (
+                    <>Écrire un commentaire</>
+                  ) : (
+                    <>Write a comment</>
+                  )}
+                </p>
               </div>
               <p
                 className="cancel"
@@ -54,7 +72,7 @@ const Guestbook = () => {
                   setComment("");
                 }}
               >
-                cancel
+                {frenchMode ? <>annuler</> : <>cancel</>}
               </p>
             </div>
             <form id="commentForm">
@@ -85,7 +103,9 @@ const Guestbook = () => {
                 />
               </div>
             </form>
-            <div className="limit_div">Max 160 characters</div>
+            <div className="limit_div">
+              {frenchMode ? <>Max 160 caractères</> : <>Max 160 characters</>}
+            </div>
             <div className="error">{dataError !== "True" && dataError}</div>
           </div>
           {dataError === "True" ? (
@@ -104,9 +124,19 @@ const Guestbook = () => {
       ) : (
         <div className="comment_warn">
           <div>
-            <p className="style_warn">Want to write a comment ? </p>
+            <p className="style_warn">
+              {frenchMode ? (
+                <>Tu veux écrire un commentaire ?</>
+              ) : (
+                <>Want to write a comment ? </>
+              )}
+            </p>
             <p className="style_inf">
-              Choose an username, email and be inventive ! 😁
+              {frenchMode ? (
+                <>Choisis un pseudo, email et sois créatif-ve ! 😁</>
+              ) : (
+                <>Choose an username, email and be inventive ! 😁</>
+              )}
             </p>
             <button
               className="button_accept"
@@ -119,8 +149,17 @@ const Guestbook = () => {
           </div>
           <div className="text_box">
             <p className="text_inf">
-              Your informations will not be shared or used for commercial
-              purposes.
+              {frenchMode ? (
+                <>
+                  Vos informations ne sont ni transmises ni utilisés à des fins
+                  commerciales.
+                </>
+              ) : (
+                <>
+                  Your informations will not be shared or used for commercial
+                  purposes.
+                </>
+              )}
             </p>
           </div>
         </div>
