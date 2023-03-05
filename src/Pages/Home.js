@@ -301,11 +301,11 @@ const Home = ({ frenchMode }) => {
           </div>
         </div>
         <div className="listing_cap">
-          <div>Expo</div>
+          <div>ViteJS</div>
           <div>
             <img
-              src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1673618332/my-content/iconsRF/EXPO_a32pti.png"
-              alt="postman"
+              src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1674989482/my-content/iconsRF/ViteJS_pvvvie.png"
+              alt="vitejs"
               width="40"
             />
           </div>
