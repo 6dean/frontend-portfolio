@@ -46,9 +46,9 @@ const HeaderResponsive = ({
             }}
           >
             {frenchMode ? (
-              <div className="lang">FR</div>
-            ) : (
               <div className="lang">EN</div>
+            ) : (
+              <div className="lang">FR</div>
             )}
           </div>
           <div

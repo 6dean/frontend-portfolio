@@ -279,26 +279,6 @@ header {
   opacity: 60%;
 }
 
-.listing_projects {
-  padding-top: 20px;
-  display: flex;
-  padding: 10px;
-}
-
-.card_fp {
-  flex: 1;
-  border: 4px solid;
-  border-radius: 10px;
-  border-image: linear-gradient(to bottom left, rgba(92, 92, 92, 0), #00000000);
-  border-image-slice: 1;
-  transition: all 0.9s;
-  padding: 15px;
-  min-height: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .img_card {
   display: flex;
   justify-content: center;
@@ -309,26 +289,29 @@ header {
   object-fit: cover;
   border-radius: 3px;
 }
-
-.card_fp:hover {
+.card_fp {
+  flex: 1;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(133, 133, 133, 0.594);
+  border-image-slice: 1;
   transition: all 0.9s;
-  border-image-source: linear-gradient(
-    to left bottom,
-    rgb(255, 0, 0),
-    rgb(81, 255, 0),
-    rgb(49, 136, 243),
-    rgb(255, 242, 0),
-    rgb(153, 139, 164)
-  );
-  box-shadow: 1px 1px 10px rgb(49, 136, 243);
+  padding: 15px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card_fp:hover {
+  transform: scale(105%);
+  transition: all 0.9s;
+  box-shadow: 0 0 15px rgba(133, 133, 133, 0.594);
   cursor: pointer;
 }
 
 .card__fp {
   flex: 1;
-  border: 4px solid;
   border-radius: 10px;
-  border-image: linear-gradient(to bottom left, rgba(92, 92, 92, 0), #00000000);
+  box-shadow: 0 0 5px rgba(133, 133, 133, 0.594);
   border-image-slice: 1;
   transition: all 0.9s;
   padding: 15px;
@@ -339,25 +322,16 @@ header {
 }
 
 .card__fp:hover {
+  transform: scale(105%);
   transition: all 0.9s;
-  border-image-source: linear-gradient(
-    to left bottom,
-    rgb(255, 0, 0),
-    rgb(81, 255, 0),
-    rgb(49, 136, 243),
-    rgb(255, 242, 0),
-    rgb(153, 139, 164)
-  );
-  box-shadow: 1px 1px 10px rgb(240, 240, 240);
-
+  box-shadow: 0 0 15px rgba(133, 133, 133, 0.594);
   cursor: pointer;
 }
 
 .card___fp {
   flex: 1;
-  border: 4px solid;
   border-radius: 10px;
-  border-image: linear-gradient(to bottom left, rgba(92, 92, 92, 0), #00000000);
+  box-shadow: 0 0 5px rgba(133, 133, 133, 0.594);
   border-image-slice: 1;
   transition: all 0.9s;
   padding: 15px;
@@ -368,17 +342,9 @@ header {
 }
 
 .card___fp:hover {
+  transform: scale(105%);
   transition: all 0.9s;
-  border-image-source: linear-gradient(
-    to left bottom,
-    rgb(255, 0, 0),
-    rgb(81, 255, 0),
-    rgb(49, 136, 243),
-    rgb(255, 242, 0),
-    rgb(153, 139, 164)
-  );
-  box-shadow: 1px 1px 10px rgb(0, 255, 51);
-
+  box-shadow: 0 0 15px rgba(133, 133, 133, 0.594);
   cursor: pointer;
 }
 
@@ -446,18 +412,17 @@ header {
 
 .listing_ab {
   padding-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  column-count: 2;
+  column-gap: 20px;
 }
 
 .card_ab {
-  min-width: 300px;
-  padding: 15px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  width: 100%;
+  margin-bottom: 20px;
   border: 1px solid rgba(78, 78, 78, 0.248);
   border-radius: 5px;
+  box-sizing: border-box;
+  padding: 15px;
 }
 
 .card_ab:hover {
@@ -854,12 +819,23 @@ footer {
   padding-bottom: 60px;
 }
 
+.img-footer {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 600px) {
   .listing_projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 20px;
+  }
+
+  .listing_ab {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .headerBar {
@@ -948,7 +924,8 @@ footer {
 @media (min-width: 601px) {
   .listing_projects {
     display: flex;
-    padding-top: 20px;
+    padding-top: 30px;
+    gap: 30px;
   }
 
   .navResp {
@@ -960,16 +937,8 @@ footer {
   }
 
   .card_fp {
-    flex: 1;
-    border: 4px solid;
-    border-image-source: linear-gradient(
-      to bottom left,
-      rgba(92, 92, 92, 0),
-      #00000000
-    );
     border-image-slice: 1;
     transition: all 0.9s;
-    margin-right: 18px;
     padding: 15px;
     min-height: 260px;
     display: flex;
@@ -977,18 +946,9 @@ footer {
     justify-content: space-between;
   }
   .card__fp {
-    flex: 1;
-    border: 4px solid;
     border-radius: 10px;
-    border-image: linear-gradient(
-      to bottom left,
-      rgba(92, 92, 92, 0),
-      #00000000
-    );
     border-image-slice: 1;
     transition: all 0.9s;
-    margin-right: 10px;
-    margin-left: 10px;
     padding: 15px;
     min-height: 260px;
     display: flex;
@@ -996,18 +956,9 @@ footer {
     justify-content: space-between;
   }
   .card___fp {
-    flex: 1;
-    border: 4px solid;
     border-radius: 10px;
-    border-image: linear-gradient(
-      to bottom left,
-      rgba(92, 92, 92, 0),
-      #00000000
-    );
     border-image-slice: 1;
     transition: all 0.9s;
-    margin-right: 10px;
-    margin-left: 10px;
     padding: 15px;
     min-height: 260px;
     display: flex;

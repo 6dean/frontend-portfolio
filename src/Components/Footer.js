@@ -1,8 +1,27 @@
 import { Link } from "react-router-dom";
 
-const Footer = ({ frenchMode }) => {
+const Footer = ({ frenchMode, darkMode }) => {
   return (
     <footer>
+      <div className="img-footer">
+        {darkMode ? (
+          <a href="https://rockdean.site/">
+            <img
+              src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1678029644/my-content/iconsRF/rf_wgednd_qtatbk.png"
+              alt="rf"
+              width="80"
+            />
+          </a>
+        ) : (
+          <a href="https://rockdean.site/">
+            <img
+              src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1678028885/my-content/iconsRF/rf_wgednd.jpg"
+              alt="rf"
+              width="80"
+            />
+          </a>
+        )}
+      </div>
       <div>
         <Link
           to="/"

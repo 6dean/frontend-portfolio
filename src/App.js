@@ -82,7 +82,7 @@ function App() {
               }
             ></Route>
           </Routes>
-          <Footer frenchMode={frenchMode} />
+          <Footer frenchMode={frenchMode} darkMode={darkMode} />
         </Router>
       </div>
     </div>

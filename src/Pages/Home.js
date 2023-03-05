@@ -230,7 +230,11 @@ const Home = ({ frenchMode }) => {
               window.scrollTo(0, 0);
             }}
           >
-            {frenchMode ? <>Voir tous mes projets </> : <>Check all projects</>}
+            {frenchMode ? (
+              <>Voir tous mes projets </>
+            ) : (
+              <>Check all projects </>
+            )}{" "}
             <FontAwesomeIcon icon={faArrowRight} size="sm" />
           </Link>
         </div>
