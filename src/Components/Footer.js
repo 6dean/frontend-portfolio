@@ -5,21 +5,31 @@ const Footer = ({ frenchMode, darkMode }) => {
     <footer>
       <div className="img-footer">
         {darkMode ? (
-          <a href="https://rockdean.site/">
+          <Link
+            to="/"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
             <img
               src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1678029644/my-content/iconsRF/rf_wgednd_qtatbk.png"
               alt="rf"
-              width="80"
+              width="50"
             />
-          </a>
+          </Link>
         ) : (
-          <a href="https://rockdean.site/">
+          <Link
+            to="/"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
             <img
               src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1678028885/my-content/iconsRF/rf_wgednd.jpg"
               alt="rf"
-              width="80"
+              width="50"
             />
-          </a>
+          </Link>
         )}
       </div>
       <div>
