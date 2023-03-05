@@ -150,9 +150,7 @@ const Skills = ({ frenchMode }) => {
             width="40"
           />
           <div className="title_ab">GitHub</div>
-          <div className="description_ab">
-            Save, Share and manage your work.
-          </div>
+          <div className="description_ab">Manage your codes.</div>
         </div>
         <div className="card_ab">
           <img
@@ -233,9 +231,7 @@ const Skills = ({ frenchMode }) => {
           />
           <div className="title_ab">AegiSub</div>
           <div>
-            <div className="description_ab">
-              Add subtitles to your medias videos.
-            </div>
+            <div className="description_ab">Add subtitles to videos.</div>
           </div>
         </div>
         <div className="card_ab">
@@ -268,9 +264,7 @@ const Skills = ({ frenchMode }) => {
           />
           <div className="title_ab">Iron a shirt</div>
           <div>
-            <div className="description_ab">
-              Yes, I can do that on my own. 👔
-            </div>
+            <div className="description_ab">Yes, I do that on my own. 👔</div>
           </div>
         </div>
         <div className="card_ab">
@@ -281,9 +275,7 @@ const Skills = ({ frenchMode }) => {
           />
           <div className="title_ab">Champion 2</div>
           <div>
-            <div className="description_ab">
-              I can carry you on Rocket League. 🎮
-            </div>
+            <div className="description_ab">Carry you on Rocket League. 🎮</div>
           </div>
         </div>
       </div>
