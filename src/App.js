@@ -21,12 +21,21 @@ import Setup from "./Pages/Setup";
 import NavigationResp from "./Pages/NavResponsive";
 
 // STATES
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [frenchMode, setFrenchMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true"
+  );
+  const [frenchMode, setFrenchMode] = useState(
+    localStorage.getItem("frenchMode") === "true"
+  );
   const [displayMenu, setDisplayMenu] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("frenchMode", frenchMode);
+    localStorage.setItem("darkMode", darkMode);
+  }, [frenchMode, darkMode]);
 
   return (
     <div className={darkMode ? "rf" : null}>
