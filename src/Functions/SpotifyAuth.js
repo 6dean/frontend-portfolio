@@ -9,7 +9,7 @@ const auth_token = Buffer.from(
   "utf-8"
 ).toString("base64");
 
-const getAuth = async (setTokenSpotify) => {
+const SpotifyAuth = async (setTokenSpotify) => {
   try {
     //make post request to SPOTIFY API for access token, sending relavent info
     const token_url = "https://accounts.spotify.com/api/token";
@@ -29,4 +29,4 @@ const getAuth = async (setTokenSpotify) => {
   }
 };
 
-export default getAuth;
+export default SpotifyAuth;

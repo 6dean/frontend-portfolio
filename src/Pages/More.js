@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-import getAuth from "../Functions/GetAuth";
+import SpotifyAuth from "../Functions/SpotifyAuth";
+import YouTubeAuth from "../Functions/YoutubeAuth";
 import axios from "axios";
 
 const More = ({ frenchMode }) => {
   const [dataSpotify, setDataSpotify] = useState({});
+  const [dataYoutube, setDataYoutube] = useState({});
   const [tokenSpotify, setTokenSpotify] = useState("");
+  const [tokenYoutube, setTokenYoutube] = useState("");
 
   useEffect(() => {
     if (tokenSpotify) {
@@ -24,10 +27,25 @@ const More = ({ frenchMode }) => {
         fetchDataSpotify();
       }, 800);
     }
-  }, [tokenSpotify]);
+    if (tokenYoutube) {
+      const fetchDataYoutube = async () => {
+        const responseYoutube = await axios.post(
+          "https://site--backend-portfolio--6qn7tv96v7tt.code.run/youtube",
+          {
+            tokenYoutube: tokenYoutube,
+          }
+        );
+        setDataYoutube(responseYoutube.data);
+      };
+      setTimeout(() => {
+        fetchDataYoutube();
+      }, 800);
+    }
+  }, [tokenSpotify, tokenYoutube]);
 
   useEffect(() => {
-    getAuth(setTokenSpotify);
+    SpotifyAuth(setTokenSpotify);
+    YouTubeAuth(setTokenYoutube);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -272,6 +290,62 @@ const More = ({ frenchMode }) => {
       </div>
       <div className="title">
         <img
+          src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1678127409/my-content/iconsRF/YTB_nexesj_fuih3r.png"
+          alt="youtube"
+          width="20"
+        />{" "}
+        Youtube
+      </div>
+      <div className="div_description">
+        <div className="description">
+          {frenchMode ? (
+            <>
+              Il est super important de rester connecté au milieu du
+              développement et des autres développeurs. Je partage donc avec
+              vous quelques devs au top présent sur Youtube que je visionne pour
+              continuer de progresser ou revoir des sujets.{" "}
+            </>
+          ) : (
+            <>
+              It's super important to stay connected to the development
+              community and other developers. I share with you some top devs
+              present on Youtube that I'm watching to continue to progress or
+              review some topics.
+            </>
+          )}
+        </div>
+      </div>
+      <div className="listing-card-ytb">
+        {Array.isArray(dataYoutube) ? (
+          dataYoutube.map((e, i) => {
+            return (
+              <div className="card-ytb" key={i}>
+                <a
+                  href={`https://www.youtube.com/channel/${e.snippet.resourceId.channelId}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="elem-card-ytb">
+                    <img
+                      className="avatar-ytb"
+                      src={e.snippet.thumbnails.default.url}
+                      alt="avatar-ytb"
+                    />
+                  </div>
+                  <p className="title-ytb">{e.snippet.title}</p>{" "}
+                </a>
+              </div>
+            );
+          })
+        ) : (
+          <div className="container-loader">
+            <span className="loader"></span>
+            <span>Loading</span>
+          </div>
+        )}
+      </div>
+      <div className="title">
+        <img
           src="https://res.cloudinary.com/dlfp2xvis/image/upload/v1674156658/my-content/iconsRF/SPOTIFY_nexesj.png"
           alt="spotify"
           width="20"
@@ -296,7 +370,7 @@ const More = ({ frenchMode }) => {
         </div>
       </div>
       <div className="elem_song">
-        {dataSpotify.length > 1 &&
+        {dataSpotify.length > 1 ? (
           dataSpotify.map((elem, i) => {
             return (
               <div key={i} className="spotify_elem_user">
@@ -321,7 +395,13 @@ const More = ({ frenchMode }) => {
                 </div>
               </div>
             );
-          })}
+          })
+        ) : (
+          <div className="container-loader">
+            <span className="loader"></span>
+            <span>Loading</span>
+          </div>
+        )}
       </div>
     </>
   );
