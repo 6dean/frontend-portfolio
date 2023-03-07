@@ -303,14 +303,14 @@ const More = ({ frenchMode }) => {
               C'est super important de rester connecté au milieu du
               développement et des autres devs. Je vous partage donc quelques
               devs au top présent sur Youtube que je visionne pour continuer de
-              progresser. (Youtube V3 API)
+              progresser. Visible grâce à Youtube API V3 par Google.
             </>
           ) : (
             <>
               It's super important to stay connected to the development
               community and other developers. I share with you some top devs
-              present on Youtube that I'm watching to continue to progress.{" "}
-              (Youtube V3 API)
+              present on Youtube that I'm watching to continue to progress.
+              Powered by the Youtube V3 API from Google.
             </>
           )}
         </div>
