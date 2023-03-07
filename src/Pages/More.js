@@ -369,39 +369,41 @@ const More = ({ frenchMode }) => {
           )}
         </div>
       </div>
-      <div className="elem_song">
-        {dataSpotify.length > 1 ? (
-          dataSpotify.map((elem, i) => {
-            return (
-              <div key={i} className="spotify_elem_user">
-                <div className="id_img">
-                  <img
-                    src={
-                      elem.track.album.images[1] !== undefined
-                        ? elem.track.album.images[1].url
-                        : null
-                    }
-                    alt="img_music"
-                  />
-                </div>
-                <div className="title_singer">
-                  <div className="title_style">{elem.track.name}</div>
-                  <div className="separator_spotify"></div>
-                  <div className="text__date">
-                    <div className="artist_style">
-                      {elem.track.artists[0].name}{" "}
+      <div className="container-songs">
+        <div className={dataSpotify.length > 1 ? "elem_song" : "elem-empty"}>
+          {dataSpotify.length > 1 ? (
+            dataSpotify.map((elem, i) => {
+              return (
+                <div key={i} className="spotify_elem_user">
+                  <div className="id_img">
+                    <img
+                      src={
+                        elem.track.album.images[1] !== undefined
+                          ? elem.track.album.images[1].url
+                          : null
+                      }
+                      alt="img_music"
+                    />
+                  </div>
+                  <div className="title_singer">
+                    <div className="title_style">{elem.track.name}</div>
+                    <div className="separator_spotify"></div>
+                    <div className="text__date">
+                      <div className="artist_style">
+                        {elem.track.artists[0].name}{" "}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })
-        ) : (
-          <div className="container-loader">
-            <span className="loader"></span>
-            <span>Loading</span>
-          </div>
-        )}
+              );
+            })
+          ) : (
+            <div className="container-loader">
+              <span className="loader"></span>
+              <span>Loading</span>
+            </div>
+          )}
+        </div>
       </div>
     </>
   );

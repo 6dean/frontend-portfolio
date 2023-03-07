@@ -25,7 +25,7 @@ const Home = ({ frenchMode }) => {
   }, []);
 
   return (
-    <>
+    <body>
       <div className="card_id">
         <div className="text_id">
           <div className="name">Rockdean Ferdjallah</div>
@@ -324,7 +324,7 @@ const Home = ({ frenchMode }) => {
           </div>
         </div>
       </div>
-    </>
+    </body>
   );
 };
 
