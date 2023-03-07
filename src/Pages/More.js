@@ -300,17 +300,17 @@ const More = ({ frenchMode }) => {
         <div className="description">
           {frenchMode ? (
             <>
-              Il est super important de rester connecté au milieu du
-              développement et des autres développeurs. Je partage donc avec
-              vous quelques devs au top présent sur Youtube que je visionne pour
-              continuer de progresser ou revoir des sujets.{" "}
+              C'est super important de rester connecté au milieu du
+              développement et des autres devs. Je vous partage donc quelques
+              devs au top présent sur Youtube que je visionne pour continuer de
+              progresser. (Youtube V3 API)
             </>
           ) : (
             <>
               It's super important to stay connected to the development
               community and other developers. I share with you some top devs
-              present on Youtube that I'm watching to continue to progress or
-              review some topics.
+              present on Youtube that I'm watching to continue to progress.{" "}
+              (Youtube V3 API)
             </>
           )}
         </div>
