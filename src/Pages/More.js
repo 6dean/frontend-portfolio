@@ -129,9 +129,9 @@ const More = ({ frenchMode }) => {
               Je m'appelle Rockdean Ferdjallah, mais tous mes amis m'appellent «
               Dean » je suis né le 5 octobre 1989 à Bondy, France. Je suis un
               geek depuis l'âge de 4 ans, je jouais sur ma SNES et le Macintosh
-              de mon père. je vis maintenant à Paris. J'aime créer des
-              applications, écouter de la musique, jouer à des jeux vidéo et
-              vérifier mon portefeuille crypto.
+              de mon père. je vis à Paris. J'aime créer des applications,
+              écouter de la musique, jouer à des jeux vidéo et vérifier mon
+              portefeuille crypto.
               <br />
               Si je devais me résumer en trois mots : <span>
                 impliqué
