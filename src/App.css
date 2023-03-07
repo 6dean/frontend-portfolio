@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-.rf {
+.darkmode {
   background-color: rgb(18, 18, 18);
   color: rgba(255, 255, 255, 0.846);
 }
 
-.body {
+.body-rf {
   transition: all 0.9s;
   max-width: 720px;
   padding-left: 10px;
@@ -428,6 +428,14 @@ header {
 .card_ab:hover {
   box-shadow: 1px 1px 10px rgba(126, 126, 126, 0.242);
   transition: all 0.3s;
+}
+
+.card_ab img {
+  transition: transform 0.3s ease;
+}
+
+.card_ab:hover img {
+  transform: rotate(360deg);
 }
 
 .title_ab {

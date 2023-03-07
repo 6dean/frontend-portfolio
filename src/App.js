@@ -38,8 +38,8 @@ function App() {
   }, [frenchMode, darkMode]);
 
   return (
-    <div className={darkMode ? "rf" : null}>
-      <div className="body">
+    <div className={darkMode ? "darkmode" : null}>
+      <div className="body-rf">
         <Router>
           <HeaderBar
             darkMode={darkMode}
