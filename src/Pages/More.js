@@ -100,7 +100,7 @@ const More = ({ frenchMode }) => {
           <li className="list_li">
             <a
               className="link_more"
-              href="https://drive.google.com/file/d/1XYJ4NaoefUdL3SyK_jYgruu36IcZg42t/view?usp=share_link"
+              href="https://drive.google.com/file/d/1s25MdJtp7ShgvCKGSUhFcmbqoL_LxGdc/view?usp=share_link"
               target="_blank"
               rel="noreferrer"
             >
